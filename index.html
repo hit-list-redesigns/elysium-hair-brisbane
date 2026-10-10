@@ -840,6 +840,9 @@ footer a:hover{color:var(--paper);text-decoration:underline}
   document.querySelectorAll('[data-stylist]').forEach(function(a){
     a.addEventListener('click',function(){var r=document.getElementById('who-'+a.dataset.stylist);if(r){r.checked=true;S.who=r.value;render()}});
   });
+  document.querySelectorAll('.seg button').forEach(function(b){
+    b.addEventListener('click',function(){var r=document.getElementById('len-'+b.dataset.len);if(r){r.checked=true;S.len=b.dataset.len;render()}});
+  });
   render();
 })();
 </script>
