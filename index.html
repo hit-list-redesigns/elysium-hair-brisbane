@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elysium Hair Brisbane · Colour, cuts &amp; blow-dries on Adelaide Street</title>
+<meta name="description" content="Seven-time Australian Salon of the Year in Brisbane City. Balayage, blondes, bespoke colour, curl by curl cuts and blow-dries at 15 Adelaide Street. Book online.">
+<meta name="theme-color" content="#3A1D5D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://elysiumhairbrisbane.com.au">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1D0F2E;
+  --night:#28143F;
+  --jac:#3A1D5D;
+  --jac-2:#4A2A74;
+  --bloom:#C8B6E8;
+  --mist:#F3EEF8;
+  --mist-2:#E7DEF2;
+  --plum:#5A4775;
+  --toner:#4A2A74;
+  --champ:#E8CE98;
+  --champ-2:#F4E4C1;
+  --rule-dark:rgba(232,206,152,.26);
+  --rule-light:rgba(58,29,93,.18);
+  --serif:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --sans:"Albert Sans", "Helvetica Neue", Arial, sans-serif;
+  --gutter:clamp(1rem, 4vw, 3.5rem);
+  --max:1320px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-color:var(--jac-2) var(--mist);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--champ);color:var(--ink)}
+::-webkit-scrollbar{width:12px;height:10px}
+::-webkit-scrollbar-track{background:var(--mist)}
+::-webkit-scrollbar-thumb{background:var(--jac-2);border-radius:8px;border:3px solid var(--mist)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.22em}
+:focus-visible{outline:2px solid var(--toner);outline-offset:3px;border-radius:2px}
+.dark :focus-visible{outline-color:var(--champ)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.015em;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.dark{background:var(--jac);color:var(--mist)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:100;background:var(--champ);color:var(--ink);padding:.6rem 1rem;font-weight:600}
+.skip:focus{top:1rem}
+.num{font-variant-numeric:lining-nums tabular-nums}
+
+/* buttons */
+.btn{--h:3.25rem;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:var(--h);padding:0 1.6rem;font:600 .95rem/1 var(--sans);letter-spacing:.02em;text-decoration:none;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:background-color .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease),transform .35s var(--ease)}
+.btn svg{width:1rem;height:1rem;flex:none}
+.btn-champ{background:var(--champ);color:var(--ink)}
+.btn-champ:hover{background:var(--champ-2)}
+.btn-line{border-color:rgba(243,238,248,.55);color:var(--mist)}
+.btn-line:hover{border-color:var(--champ);color:var(--champ)}
+.btn-ink{background:var(--jac);color:var(--mist)}
+.btn-ink:hover{background:var(--toner)}
+.btn-line-ink{border-color:var(--jac);color:var(--jac)}
+.btn-line-ink:hover{background:var(--jac);color:var(--mist)}
+.btn:active{transform:translateY(1px)}
+.ph{display:inline-block;font:600 .74rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:.35rem .55rem;border:1px dashed currentColor;border-radius:4px;vertical-align:middle;white-space:nowrap}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--jac);color:var(--mist);transition:box-shadow .4s var(--ease)}
+.top.scrolled{box-shadow:0 10px 30px -18px rgba(29,15,46,.9)}
+.top .wrap{display:flex;align-items:center;gap:2rem;height:4.75rem}
+.logo{display:block;color:var(--champ);width:9.5rem;flex:none}
+.logo svg{display:block;width:100%;height:auto}
+.nav{display:flex;gap:1.75rem;margin-left:auto;font-size:.92rem}
+.nav a{text-decoration:none;color:var(--bloom);transition:color .3s}
+.nav a:hover{color:var(--mist)}
+.top-call{font-size:.92rem;color:var(--mist);text-decoration:none;white-space:nowrap}
+.top-call:hover{color:var(--champ)}
+.top .btn{--h:2.75rem;padding:0 1.25rem}
+
+/* hero */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(2rem,4vw,4.5rem);min-height:min(calc(100svh - 4.75rem),56rem);padding-top:clamp(1.5rem,3vw,2.5rem);padding-bottom:clamp(2rem,4vw,3.5rem)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;gap:1.75rem;padding-block:1rem}
+.hero h1{font-size:clamp(2.7rem,5.1vw,5.4rem);font-weight:400;letter-spacing:-.025em;line-height:.98}
+.hero h1 em{font-style:italic;color:var(--bloom)}
+.hero .lede{font-size:clamp(1.05rem,1.2vw,1.2rem);color:var(--bloom);max-width:34rem;line-height:1.6}
+.hero .lede strong{color:var(--mist);font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem}
+.status{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.1rem;font-size:.9rem;color:var(--bloom)}
+.status b{font-weight:500;color:var(--mist)}
+.dot{display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--bloom);margin-right:.45rem;vertical-align:.08em}
+.is-open .dot{background:var(--champ);box-shadow:0 0 0 4px rgba(232,206,152,.18)}
+.status{flex-direction:column;align-items:flex-start}
+
+/* shade strip */
+.shade{display:flex;flex-direction:column;gap:.9rem;min-height:0}
+.strip{flex:1;display:flex;gap:6px;min-height:30rem;margin:0}
+.swatch{position:relative;flex:1 1 0;min-width:0;overflow:hidden;background:var(--jac-2);transition:flex-grow .7s var(--ease);outline-offset:-3px}
+.swatch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--pos,50% 40%);transform:scale(1.04);transition:transform 1s var(--ease)}
+.swatch::after{content:"";position:absolute;left:0;right:0;bottom:0;height:9.5rem;background:linear-gradient(to top,rgba(29,15,46,.88),rgba(29,15,46,0));pointer-events:none}
+.swatch span{z-index:1;position:absolute;left:50%;bottom:.9rem;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;font:500 .72rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.55);white-space:nowrap;transition:opacity .4s}
+.swatch:hover,.swatch:focus-visible{flex-grow:5}
+.swatch:hover img,.swatch:focus-visible img{transform:scale(1)}
+.shade-note{display:flex;justify-content:space-between;gap:1rem;font-size:.85rem;color:var(--bloom)}
+.shade-note .tap{display:none}@media (hover:none){.shade-note .hov{display:none}.shade-note .tap{display:inline}}
+.shade-note .scale{display:flex;align-items:center;gap:.6rem;font-variant-numeric:lining-nums}
+.shade-note .scale i{display:block;width:4.5rem;height:1px;background:linear-gradient(90deg,var(--bloom),var(--champ))}
+@media (prefers-reduced-motion:no-preference){
+  .lift .swatch{animation:lift 1.5s var(--ease) both;animation-delay:calc(var(--i) * 85ms + 150ms)}
+  .lift .swatch img{animation:settle 2.2s var(--ease) both;animation-delay:calc(var(--i) * 85ms + 150ms)}
+}
+@keyframes lift{from{clip-path:inset(45% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes settle{from{transform:scale(1.22) translateY(6%)}to{transform:scale(1.04)}}
+
+/* section rhythm */
+section{scroll-margin-top:5rem}
+.sec{padding:clamp(4.5rem,9vw,8.5rem) 0}
+.h2{font-size:clamp(2.25rem,4.2vw,4rem);letter-spacing:-.02em}
+.h2 em{font-style:italic}
+.dark .h2 em{color:var(--bloom)}
+.mist .h2 em{color:var(--toner)}
+.intro{font-size:1.125rem;color:var(--plum);max-width:38rem;line-height:1.65}
+.dark .intro{color:var(--bloom)}
+
+/* match */
+.match .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,6rem);align-items:start}
+.match-copy{display:flex;flex-direction:column;gap:1.6rem;position:sticky;top:7rem}
+.roster{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule-light)}
+.roster li{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:.25rem 1.5rem;padding:1.35rem 0;border-bottom:1px solid var(--rule-light)}
+.roster .name{font-family:var(--serif);font-size:clamp(1.7rem,2.4vw,2.2rem);line-height:1}
+.roster .role{font-weight:500;font-size:.95rem;color:var(--ink);align-self:end}
+.roster .bio{grid-column:2;font-size:.92rem;color:var(--plum)}
+.roster-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1.1rem}
+.roster-head h3{font-size:1.6rem}
+
+/* menu */
+.menu{background:var(--mist-2)}
+.menu-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:2rem 4rem;align-items:end;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.length{display:flex;flex-direction:column;gap:.7rem}
+.length p{font-size:.95rem;color:var(--plum)}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--jac);border-radius:999px;padding:4px;gap:2px;width:max-content;max-width:100%}
+.seg button{font:500 .9rem/1 var(--sans);color:var(--jac);background:none;border:0;border-radius:999px;padding:.7rem 1rem;cursor:pointer;transition:background-color .3s,color .3s}
+.seg button[aria-pressed="true"]{background:var(--jac);color:var(--mist)}
+.seg button:hover:not([aria-pressed="true"]){background:rgba(58,29,93,.08)}
+.menu-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2.5rem,5vw,5rem) clamp(2.5rem,6vw,6rem)}
+.menu-group h3{font-size:clamp(1.9rem,2.6vw,2.4rem);padding-bottom:.9rem;border-bottom:1px solid var(--jac);margin-bottom:.4rem;display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.menu-group h3 a{font:500 .85rem/1 var(--sans);letter-spacing:.02em;color:var(--toner);white-space:nowrap}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.2rem 1rem;padding:1rem 0;border-bottom:1px solid var(--rule-light)}
+.item .t{font-weight:600;font-size:1.02rem;display:flex;align-items:baseline;gap:.75rem}
+.item .t::after{content:"";flex:1;border-bottom:1px dotted rgba(58,29,93,.35);transform:translateY(-.25rem);min-width:1.5rem}
+.item .p{font-family:var(--serif);font-size:1.35rem;line-height:1.1;text-align:right;white-space:nowrap;font-variant-numeric:lining-nums}
+.item .p small{font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--plum);margin-right:.35rem;vertical-align:.2em}
+.item .d{grid-column:1 / -1;font-size:.9rem;color:var(--plum);max-width:34rem}
+.p.changed{animation:flash .9s var(--ease)}
+@keyframes flash{from{color:var(--toner);opacity:.2}to{opacity:1}}
+.menu-notes{margin-top:clamp(2.5rem,5vw,4rem);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem 3rem;font-size:.92rem;color:var(--plum);border-top:1px solid var(--jac);padding-top:1.5rem}
+.menu-notes strong{display:block;color:var(--ink);font-weight:600;margin-bottom:.25rem}
+
+/* programme */
+.prog{background:var(--night)}
+.prog .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.prog-photo{position:relative;margin:0}
+.prog-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:58% 50%}
+.prog-photo figcaption{margin-top:.8rem;font-size:.85rem;color:var(--bloom)}
+.steps{list-style:none;margin:2rem 0 0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding:1.05rem 0;border-top:1px solid var(--rule-dark)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--bloom);line-height:1.3}
+.steps b{display:block;font-weight:600;color:var(--mist)}
+.steps span{color:var(--bloom);font-size:.95rem}
+.prog-foot{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center;color:var(--bloom);font-size:.95rem}
+
+/* proof */
+.proof .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(3rem,6vw,5rem)}
+.award{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:2rem 5rem;align-items:start}
+.award h2{font-size:clamp(2.6rem,5.4vw,5.6rem);letter-spacing:-.03em;line-height:.98}
+.award h2 em{font-style:italic;color:var(--toner)}
+.award ul{list-style:none;margin:0;padding:0;font-size:.98rem}
+.award li{padding:.7rem 0;border-bottom:1px solid var(--rule-light)}
+.award li:first-child{border-top:1px solid var(--rule-light)}
+.reviews-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px solid var(--jac);padding-bottom:1rem}
+.reviews-head h3{font-size:clamp(1.6rem,2.4vw,2.2rem)}
+.reviews-head p{font-size:.95rem;color:var(--plum);display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem;margin-top:2rem}
+.quotes figure{margin:0;display:flex;flex-direction:column;gap:1rem}
+.quotes blockquote{margin:0;font-family:var(--serif);font-size:clamp(1.25rem,1.6vw,1.5rem);line-height:1.42}
+.quotes figcaption{font-size:.9rem;color:var(--plum);display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+
+/* gallery */
+.chair{padding-bottom:clamp(4.5rem,9vw,8.5rem)}
+.chair-head{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;margin-bottom:1.75rem;flex-wrap:wrap}
+.chair-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(9rem,15vw,13.5rem);gap:8px}
+.chair-grid img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;background:var(--mist-2)}
+.g1{grid-column:span 4;grid-row:span 3}.g2{grid-column:span 3;grid-row:span 2}.g3{grid-column:span 5;grid-row:span 2}.g4{grid-column:span 3;grid-row:span 2}.g5{grid-column:span 5;grid-row:span 2}.g6{grid-column:span 4;grid-row:span 1}
+
+/* booking */
+.book .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(2.5rem,5vw,5rem);align-items:start}
+.book-intro{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:1.5rem clamp(2.5rem,5vw,5rem);align-items:end}
+fieldset{border:0;margin:0 0 2.75rem;padding:0;min-width:0}
+legend{font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,1.9rem);padding:0;margin-bottom:1.1rem;display:flex;gap:.8rem;align-items:baseline}
+legend i{font-style:italic;color:var(--bloom);font-size:1rem}
+.hint{font-size:.9rem;color:var(--bloom);margin:-.4rem 0 1rem}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:8px}
+.opts.days{grid-template-columns:repeat(4,minmax(0,1fr))}
+.opts.tod{grid-template-columns:repeat(3,minmax(0,1fr))}
+.opts.lens{grid-template-columns:repeat(4,minmax(0,1fr))}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.opt label{display:flex;flex-direction:column;gap:.2rem;min-height:4.1rem;justify-content:center;padding:.8rem 2.6rem .8rem 1rem;border:1px solid var(--rule-dark);border-radius:10px;cursor:pointer;transition:background-color .3s var(--ease),border-color .3s var(--ease),color .3s var(--ease);position:relative}
+.opt label b{font-weight:600;font-size:.98rem;color:var(--mist);line-height:1.25}
+.opt label small{font-size:.82rem;color:var(--bloom);line-height:1.3}
+.opt label::after{content:"";position:absolute;right:.9rem;top:50%;width:1.15rem;height:1.15rem;margin-top:-.575rem;border-radius:50%;border:1px solid var(--rule-dark);transition:all .3s var(--ease)}
+.opt input:hover + label{border-color:rgba(232,206,152,.6)}
+.opt input:focus-visible + label{outline:2px solid var(--champ);outline-offset:2px}
+.opt input:checked + label{background:var(--champ);border-color:var(--champ)}
+.opt input:checked + label b{color:var(--ink)}
+.opt input:checked + label small{color:#4B3A2A}
+.opt input:checked + label::after{border-color:var(--ink);background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.5L12 5.3' fill='none' stroke='%23E8CE98' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/80% no-repeat}
+.opt input:disabled + label{opacity:.4;cursor:not-allowed}
+.opt input:disabled{cursor:not-allowed}
+.check{display:flex;gap:.75rem;align-items:flex-start;margin-top:1rem;font-size:.95rem;color:var(--bloom);cursor:pointer}
+.check input{appearance:none;width:1.25rem;height:1.25rem;border:1px solid var(--bloom);border-radius:4px;margin:.15rem 0 0;flex:none;display:grid;place-items:center;cursor:pointer}
+.check input:checked{background:var(--champ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.5L12 5.3' fill='none' stroke='%231D0F2E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/85% no-repeat;border-color:var(--champ)}
+.check b{color:var(--mist);font-weight:500}
+.summary{position:sticky;top:6.5rem;background:var(--night);border:1px solid var(--rule-dark);border-radius:14px;padding:clamp(1.5rem,2.5vw,2.25rem);box-shadow:0 30px 60px -30px rgba(10,4,20,.8)}
+.summary h3{font-size:1.75rem;margin-bottom:1.25rem}
+.summary dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.65rem 1.25rem;font-size:.95rem;padding-bottom:1.25rem;border-bottom:1px solid var(--rule-dark)}
+.summary dt{color:var(--bloom)}
+.summary dd{margin:0;color:var(--mist);text-align:right;font-weight:500}
+.summary dd.empty{color:var(--bloom);font-weight:400;font-style:italic}
+.price-line{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.1rem 0 .2rem}
+.price-line span{color:var(--bloom);font-size:.95rem}
+.price-line strong{font-family:var(--serif);font-weight:400;font-size:2.4rem;color:var(--champ);line-height:1;font-variant-numeric:lining-nums}
+.summary .fine{font-size:.85rem;color:var(--bloom);margin:.6rem 0 1.4rem;line-height:1.5}
+.summary .btn{width:100%}
+.summary .btn + .btn{margin-top:.6rem}
+.summary .after{margin-top:1rem;font-size:.85rem;color:var(--bloom);text-align:center}
+.summary .after a{color:var(--mist)}
+
+/* visit */
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,6rem)}
+.hours{list-style:none;margin:1.75rem 0 0;padding:0;border-top:1px solid var(--jac)}
+.hours li{position:relative;display:grid;grid-template-columns:7rem minmax(0,1fr) auto;align-items:center;gap:1rem;padding:.95rem .9rem;border-bottom:1px solid var(--rule-light);font-variant-numeric:lining-nums tabular-nums}
+.hours li .day{font-weight:600}
+.hours li .tm{font-family:var(--serif);font-size:1.2rem}
+.hours li.closed .tm{font-family:var(--sans);font-size:.95rem;color:var(--plum)}
+.hours li .tag{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.hours li.today{background:var(--jac);color:var(--mist);border-radius:8px;border-color:transparent}
+.hours li.today .tm{color:var(--champ)}
+.hours li.today.closed .tm{color:var(--bloom)}
+.hours li .bar{grid-column:1 / -1;height:2px;background:rgba(243,238,248,.18);position:relative;margin-top:.35rem;display:none}
+.hours li.today:not(.closed) .bar{display:block}
+.hours li .bar i{position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--champ);transform:translateX(-50%)}
+.hours-note{margin-top:1rem;font-size:.9rem;color:var(--plum)}
+.where address{font-style:normal;font-family:var(--serif);font-size:clamp(1.8rem,2.6vw,2.4rem);line-height:1.1;margin:1.5rem 0 1rem}
+.where .landmarks{color:var(--plum);max-width:32rem}
+.contact-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.6rem 0 2rem}
+.map{position:relative;width:100%;aspect-ratio:16/10;border:0;background:var(--mist-2);filter:grayscale(1) contrast(1.05) brightness(1.02);border-radius:4px}
+.getting{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem 2rem;margin-top:2rem;font-size:.92rem;color:var(--plum)}
+.getting strong{display:block;color:var(--ink);font-weight:600}
+
+/* close */
+.close{position:relative;overflow:hidden;text-align:center}
+.close .wrap{display:flex;flex-direction:column;align-items:center;gap:1.75rem}
+.close h2{font-size:clamp(2.8rem,6.2vw,6rem);letter-spacing:-.03em;line-height:.96;max-width:16ch}
+.close h2 em{font-style:italic;color:var(--bloom)}
+.close p{color:var(--bloom);max-width:36rem}
+.close .cta-row{justify-content:center}
+.close-strip{display:flex;gap:6px;height:clamp(7rem,14vw,11rem);margin-top:clamp(3rem,6vw,5rem)}
+.close-strip div{flex:1;background-size:cover;background-position:50% 30%}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 2rem;font-size:.92rem;color:var(--bloom)}
+.perks a{color:var(--mist)}
+
+footer{background:var(--ink);color:var(--bloom);font-size:.9rem;padding:clamp(3rem,6vw,4.5rem) 0 2.5rem}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:2.5rem}
+footer .logo{width:11rem}
+footer h2{font:600 .95rem/1.3 var(--sans);letter-spacing:0;color:var(--mist);margin:0 0 .9rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+footer a{color:var(--bloom);text-decoration:none}
+footer a:hover{color:var(--champ);text-decoration:underline}
+.legal{grid-column:1 / -1;border-top:1px solid rgba(200,182,232,.18);padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:.82rem}
+
+/* mobile bar */
+.mbar{display:none}
+
+@media (max-width:1100px){
+  .nav{display:none}
+  .top-call{margin-left:auto}
+}
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);min-height:0;gap:2rem}
+  .strip{min-height:24rem;height:56vw;max-height:30rem}
+  .match .wrap,.prog .wrap,.visit .wrap,.book .wrap,.book-intro,.menu-head,.award{grid-template-columns:1fr}
+  .match-copy{position:static}
+  .summary{position:static}
+  .quotes{grid-template-columns:1fr;gap:2rem}
+  .menu-notes{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  .prog-photo img{aspect-ratio:16/11}
+}
+@media (max-width:760px){
+  body{padding-bottom:calc(4.6rem + env(safe-area-inset-bottom))}
+  .top .wrap{height:4rem;gap:1rem}
+  .logo{width:7.6rem}
+  .top .btn,.top-call{display:none}
+  .menu-cols{grid-template-columns:1fr}
+  .opts.days,.opts.lens{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .opts.tod{grid-template-columns:1fr}
+  .chair-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:13rem}
+  .chair-grid img{grid-column:auto;grid-row:auto}
+  .chair-grid .g1{grid-row:span 2}
+  .chair-grid .g6{display:none}
+  .roster li{grid-template-columns:1fr}
+  .roster .bio{grid-column:1}
+  .getting{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+  .hours li{grid-template-columns:5.5rem minmax(0,1fr) auto;padding:.9rem .7rem}
+  .mbar{display:grid;grid-template-columns:1.6fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:var(--ink);border-top:1px solid var(--rule-dark)}
+  .mbar .btn{--h:3.1rem;padding:0 1rem}
+  .hero .wrap{gap:1.5rem;padding-top:1rem}
+  .shade{order:-1}
+  .strip{flex:none;min-height:0;height:13rem;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scroll-padding-inline:var(--gutter);scrollbar-width:none}
+  .strip::-webkit-scrollbar{display:none}
+  .swatch{flex:0 0 36vw;scroll-snap-align:start}
+  .swatch img{object-position:var(--mpos,var(--pos))}
+  .swatch:hover,.swatch:focus-visible{flex-grow:0}
+  .shade-note{display:none}
+  .hero-copy{gap:1.4rem;padding-block:0}
+  .hero h1{font-size:clamp(2.35rem,10.5vw,3rem)}
+  .close-strip div:nth-child(n+7){display:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="elysium" viewBox="0 0 348.86 132.52" fill="currentColor"><path d="M22.7871,64.9126c0,11.58,2.8955,23.4585,17.669,23.4585,6.788,0,13.9755-4.2925,17.9687-10.8809h.5986C55.6289,85.3765,46.9443,89.6684,38.959,89.6684c-14.5742,0-23.459-10.98-23.459-23.6577s7.0879-24.8559,22.2607-24.8559c14.0752,0,21.6622,11.7788,21.961,23.7578Zm.1006-.9981H53.0342c-.3-7.4868-3.4942-21.7617-14.7744-21.7617C27.2793,42.1528,23.6855,56.228,22.8877,63.9145Z"/><path d="M38.959,90.1684C27.0529,90.1684,15,81.87,15,66.0107c0-12.621,7.0378-25.3559,22.7607-25.3559,14.3486,0,22.16,12.1969,22.4608,24.2453l.0128.5125H23.289c.1154,15.3192,5.5788,22.4585,17.167,22.4585,6.6347,0,13.684-4.2759,17.5412-10.64l.146-.2409h1.64l-.3.6977C55.7717,86.3094,46.5007,90.1684,38.959,90.1684ZM37.7607,41.6548C22.7286,41.6548,16,53.8875,16,66.0107c0,11.5079,7.8862,23.1577,22.959,23.1577,5.7848,0,12.628-2.3612,16.9332-7.5269-4.1678,4.4446-9.9335,7.23-15.4362,7.23-12.2258,0-18.1689-7.8369-18.1689-23.9585l.0462-.5.0571-.55c.3821-3.6812,2.9221-21.9354,15.5837-22.207C37.9028,41.6551,37.8319,41.6548,37.7607,41.6548ZM53.5545,64.4126h5.6508c-.5681-14.3538-9.7863-21.5359-18.9924-22.6142,9.8182,1.5048,13.01,14.3288,13.3209,22.0961Zm-30.1077-.9981H52.51c-.44-7.9564-3.8833-20.7617-14.25-20.7617C26.74,42.6528,23.99,58.8745,23.4468,63.4145Z"/><path d="M63.7158,16.1987C67.9082,15.8,71.8008,15.5,75.9941,15.5V71.8c0,3.2939,0,11.58,1.3975,14.2749A5.7518,5.7518,0,0,0,80.9854,88.67H64.8135a5.6638,5.6638,0,0,0,3.6933-2.4956C69.9043,83.58,69.9043,75.0942,69.9043,71.8V32.9692c0-2.7949,0-12.1787-1.3975-14.0752A2.5412,2.5412,0,0,0,66.91,17.2969l-.1006-.1a6.699,6.699,0,0,0-3.1944-.9986Z"/><path d="M84.5566,89.17H61.2447l3.4314-.9807c1.7781-.5083,2.8848-1.24,3.3835-2.2384,1.3447-2.4978,1.3447-10.9639,1.3447-14.151V32.9692c0-9.93-.7069-12.9737-1.3-13.7786l-.0719-.1388c-.23-.6918-.5693-.919-1.3461-1.3078l-.1851-.1485a6.2089,6.2089,0,0,0-2.9244-.8983l.0384-.9985h.077C68.1039,15.2792,71.8858,15,75.9941,15h.5V71.8c0,3.1336,0,11.4577,1.3414,14.0447A5.1856,5.1856,0,0,0,81.1227,88.19Zm-17.2844-1H78.6787a5.7828,5.7828,0,0,1-1.7158-1.8379C75.4941,83.5018,75.4941,75.3018,75.4941,71.8V16.0014c-3.0239.0169-5.8942.1856-9.0042.4486.1907.0957.3822.2016.577.3186l.1388.1172a2.9788,2.9788,0,0,1,1.7509,1.7786c.9874,1.46,1.4477,6.0149,1.4477,14.3048V71.8c0,5.5429-.1656,12.2129-1.4572,14.6116A4.404,4.404,0,0,1,67.2722,88.17Z"/><path d="M82.3818,42.2529H98.8525a4.2272,4.2272,0,0,0-3.3935,4.9907c.8974,7.1875,14.2744,31.2447,15.9717,35.1377,2.1953-7.2871,13.875-28.35,14.6738-34.7382.499-4.0928-4.6924-4.4922-7.6865-5.39l16.27.1c-4.791,1.6968-6.9873,8.9839-11.8789,19.3658L111.4307,86.2749A125.63,125.63,0,0,1,96.457,114.9238a4.4914,4.4914,0,0,1-3.5937,2.0962,4.68,4.68,0,0,1-3.3945-1.6968c-1.4971-1.5971-1.8965-5.69-.6983-5.69.1,0,.1992.1.3.1a6.8486,6.8486,0,0,0,2.3955.499c5.7891,0,11.5791-7.9853,17.0694-20.3637L92.3643,55.729C89.8682,50.6377,88.57,43.95,82.3818,42.2529Z"/><path d="M92.8633,117.52a5.1371,5.1371,0,0,1-3.7662-1.8622c-1.3185-1.4066-1.8684-4.5115-1.3114-5.797a1.0538,1.0538,0,0,1,.9848-.7275.8029.8029,0,0,1,.3672.1l.1085.032a6.35,6.35,0,0,0,2.22.467c5.0906,0,10.6478-6.68,16.5192-19.8571L91.9124,55.943c-.5305-1.0819-1.0165-2.2579-1.4866-3.3951-1.7349-4.1979-3.529-8.5386-8.1762-9.8128l-3.5823-.9822h23.8262l-3.5062.9815a3.7426,3.7426,0,0,0-3.0316,4.4519C96.6167,52.48,104.23,67.2091,108.779,76.01c1.0718,2.0736,1.9822,3.8349,2.5713,5.0315,1.1794-3.2837,3.5723-8.3243,6.0885-13.6246,3.62-7.6259,7.7236-16.2692,8.17-19.8355.3341-2.74-2.2406-3.5873-5.6413-4.41-.6022-.1456-1.1793-.2854-1.6928-.44l-3.3352-1,22.6095.1384-2.6932.9538c-3.6019,1.2757-5.6952,5.9794-8.8637,13.0995-.8063,1.8117-1.72,3.8653-2.73,6.0081L111.8843,86.4851A126.8643,126.8643,0,0,1,96.86,115.22,5.0326,5.0326,0,0,1,92.8633,117.52Zm-4.1113-7.3628a1.4044,1.4044,0,0,0-.1608.5755,6.3271,6.3271,0,0,0,1.2423,4.2486,4.1665,4.1665,0,0,0,3.03,1.5387,3.9465,3.9465,0,0,0,3.1906-1.8919,125.9327,125.9327,0,0,0,14.9079-28.5268L122.3559,61.508c1.0064-2.1359,1.8786-4.0959,2.7221-5.9913,2.7423-6.1621,4.7051-10.5726,7.6252-12.6763l-10.33-.0633c2.3615.7411,4.5855,1.995,4.228,4.9265-.466,3.7273-4.4275,12.0719-8.2586,20.1418-2.8291,5.9592-5.5012,11.588-6.4328,14.68l-.3928,1.3039-.5443-1.2483c-.4187-.96-1.5939-3.234-3.0817-6.1124-4.58-8.86-12.2441-23.6883-12.9278-29.1632a4.7022,4.7022,0,0,1,1.7024-4.5527H84.8744c3.4039,1.9815,4.9613,5.7491,6.4756,9.413.464,1.1227.9439,2.2837,1.4632,3.343l16.272,34.3524-.093.21c-6.0807,13.71-11.9774,20.661-17.5264,20.661a7.2526,7.2526,0,0,1-2.5143-.51A.8164.8164,0,0,1,88.752,110.1572Z"/><path d="M152.1582,40.6558c-5.3906,0-10.6807,4.392-10.6807,10.2817,0,15.4722,28.6485,8.5845,28.6485,25.6543,0,9.8823-10.1817,14.5742-19.3653,14.5742a26.6,26.6,0,0,1-15.2734-4.4922c-.1-1.497-.1-2.9946-.1-4.4917,0-1.5971,0-3.0947.1-4.6919l.6-.1c1.3975,6.5879,6.2891,12.3779,14.7735,12.3779,6.3886,0,13.1767-3.394,13.1767-10.5815,0-15.772-28.6494-8.2852-28.6494-26.1533,0-10.1821,10.2822-13.5762,18.7666-13.5762a50.8336,50.8336,0,0,1,13.876,3.0947l.1,2.2959c0,2.6953-.1992,5.2906-.3,7.8858l-.5987.1A14.8673,14.8673,0,0,0,152.1582,40.6558Z"/><path d="M150.7607,91.666a27.0189,27.0189,0,0,1-15.5487-4.5748l-.2071-.1366-.0165-.2476c-.1007-1.5136-.1007-3.0445-.1007-4.5249,0-1.6,0-3.11.1006-4.723l.0247-.3969,1.4638-.2432.0992.4679c1.2287,5.7923,5.6265,11.9816,14.2844,11.9816,6.1055,0,12.6767-3.1548,12.6767-10.0815,0-7.2767-6.4648-9.3754-13.3092-11.5973-7.5417-2.4483-15.34-4.98-15.34-14.556,0-10.39,10.3788-14.0762,19.2666-14.0762a51.1008,51.1008,0,0,1,14.0729,3.1352l.289.1238.1132,2.61c0,1.8523-.0916,3.6532-.1807,5.3948-.0432.8463-.0863,1.6891-.119,2.5319l-.0158.4067-1.49.2491-.0853-.4891a14.3629,14.3629,0,0,0-14.5807-11.7641c-4.9166,0-10.1807,3.9305-10.1807,9.7817,0,7.1834,6.5342,9.3191,13.4519,11.58,7.4711,2.4419,15.1966,4.9669,15.1966,14.0741C170.626,86.4881,160.6325,91.666,150.7607,91.666Zm-14.79-5.2736a26.05,26.05,0,0,0,14.79,4.2736c9.3749,0,18.8653-4.8344,18.8653-14.0742,0-8.382-7.0468-10.6852-14.5072-13.1236-6.9523-2.2723-14.1413-4.622-14.1413-12.5307,0-6.4494,5.7812-10.7817,11.1807-10.7817a15.3645,15.3645,0,0,1,15.2348,11.148q.0276-.5661.0571-1.1336c.0884-1.729.18-3.517.18-5.3221l-.0853-1.9569a51.4932,51.4932,0,0,0-13.4166-2.9344c-8.4.0007-18.24,3.4253-18.24,13.0769,0,8.8493,7.4471,11.2669,14.649,13.6049,6.883,2.2344,14,4.545,14,12.5484,0,7.6138-7.09,11.0815-13.6767,11.0815-8.6034,0-13.2682-5.7016-14.9349-11.4651-.0378,1.1244-.0378,2.2283-.0378,3.3787C135.8877,83.5644,135.8877,84.9913,135.9706,86.3924Z"/><path d="M174.3193,41.9531c4.1924-.3989,8.4844-.7983,13.2764-.7983l.1,18.7666-.1,13.8755c0,2.895,0,10.1816,1.1973,12.478a5.0228,5.0228,0,0,0,3.5937,2.3955H176.2158a4.8705,4.8705,0,0,0,3.6934-2.4956c1.497-2.7949,1.497-10.3814,1.497-13.6758,0-13.1767.3995-22.66-1.5966-26.9521A8.313,8.313,0,0,0,174.3193,41.9531Zm13.376-15.772a4.5662,4.5662,0,0,1-4.6914,4.3921,4.349,4.349,0,1,1,0-8.6845A4.5527,4.5527,0,0,1,187.6953,26.1811Z"/><path d="M197.1085,89.17H176.2158l-.0921-.9914a4.3685,4.3685,0,0,0,3.3443-2.24c1.4382-2.6851,1.4382-10.2221,1.4382-13.44,0-1.9713.009-3.86.0175-5.6608.0482-10.1777.083-17.5313-1.5675-21.08a7.7828,7.7828,0,0,0-5.1431-3.316l-3.1383-.6821,3.1972-.3042c3.9437-.3753,8.4135-.8006,13.3237-.8006h.4974l.1022,19.2639-.1,13.8818c0,2.7475,0,10.0555,1.1406,12.2432a4.5605,4.5605,0,0,0,3.2551,2.1378Zm-18.2987-1h11.0313a4.38,4.38,0,0,1-1.4953-1.6718c-1.1076-2.1242-1.25-7.9043-1.25-12.7017l.1-13.8791-.0969-18.2616c-3.7206.0219-7.191.2846-10.3641.5729a8.2543,8.2543,0,0,1,3.4945,3.0453c1.7789,3.8136,1.7437,11.261,1.6949,21.5685-.0085,1.7995-.0175,3.6865-.0175,5.6561,0,3.5725,0,11.0063-1.5563,13.9119A4.9525,4.9525,0,0,1,178.81,88.17Zm4.1941-57.0972a4.8484,4.8484,0,1,1,0-9.6845,5.0712,5.0712,0,0,1,5.1914,4.7924A5.0541,5.0541,0,0,1,183.0039,31.0732Zm0-8.6845a3.85,3.85,0,1,0,0,7.6845,4.0546,4.0546,0,0,0,4.1914-3.8921A4.0608,4.0608,0,0,0,183.0039,22.3887Z"/><path d="M195.5811,41.8535h13.2763l-.5986,19.166-.1,9.3833c0,6.0894,1.7959,17.9683,12.4775,17.8682,6.9873-.1,11.6787-4.8911,14.374-9.084V70.4028l.2-8.0859c.1-10.6807.6983-12.2778-.998-15.9717-1.4981-1.9961-2.7959-3.8931-5.291-4.3921h12.9765L241.3,62.2173c-.1,10.6811-.1992,18.8667,1.3975,22.56a8.9743,8.9743,0,0,0,5.69,3.5938c-4.1934.3989-8.7852.7983-13.4766.7983V81.3833c-2.8945,4.0928-7.7861,8.1855-14.5742,8.1855-11.48,0-18.3672-6.0893-18.2676-17.7685V61.1191c.1-10.6811.3995-11.18-1.1972-14.8735C199.374,44.249,197.9766,42.3525,195.5811,41.8535Z"/><path d="M220.3369,90.0688c-6.1226,0-10.8772-1.6642-14.1315-4.9464-3.1248-3.1516-4.6846-7.6352-4.636-13.3264l0-10.6769c.0151-1.6157.0347-2.9953.0516-4.1892.0951-6.7025.1055-7.439-1.1844-10.4317-1.4589-1.9446-2.7937-3.7045-4.9574-4.1552l-4.75-.99h18.6442l-.6148,19.6816-.0994,9.373c0,2.996.4508,10.4232,4.6257,14.5591a9.9028,9.9028,0,0,0,7.3472,2.8038c6.8242-.0973,11.3039-4.772,13.8787-8.7316V70.4028l.2-8.0983c.0235-2.5321.0754-4.559.118-6.2228.1367-5.3409.174-6.7994-1.0486-9.48l-.2061-.2755c-1.3824-1.85-2.5762-3.4482-4.7506-3.8831l.0981-.99h13.4915l-.6178,21.2134c-.0955,10.21-.171,18.2857,1.3375,21.8584a8.4464,8.4464,0,0,0,5.3566,3.3567l3.235.6743-3.29.3129c-4.2582.4051-8.81.8006-13.524.8006h-.5V82.8721C231.8916,85.9879,227.2674,90.0688,220.3369,90.0688Zm-22.37-47.7153a15.1664,15.1664,0,0,1,3.2494,3.5184l.1142.1753c1.3985,3.2349,1.3861,4.1073,1.29,10.8969-.0169,1.1925-.0365,2.5705-.0515,4.18V71.8c-.0462,5.4189,1.4161,9.6628,4.3462,12.618,3.06,3.0859,7.5753,4.65,13.4214,4.65,7.4187,0,12.06-4.9961,14.166-7.9742l.9082-1.2842v8.8575c3.6219-.0214,7.1521-.2722,10.5238-.5721a9.484,9.484,0,0,1-3.6377-3.0185l-.0589-.1016c-1.6165-3.7391-1.5435-11.5323-1.4426-22.3186l.0041-.4445.5837-19.76H231.35a13.9276,13.9276,0,0,1,3.0257,3.2749l.2918.4085c1.3418,2.9221,1.3,4.5562,1.1615,9.9708-.0425,1.6594-.0942,3.681-.1179,6.2143l-.2,8.0936,0,8.9187-.0794.1235c-2.6941,4.191-7.4466,9.2089-14.7875,9.3135a10.8665,10.8665,0,0,1-8.0628-3.0933c-4.4422-4.4008-4.9218-12.1481-4.9218-15.2748l.1-9.3886.5828-18.6607Z"/><path d="M250.085,41.9531c4.292-.3989,8.5849-.7983,13.2763-.7983v7.2871c2.8946-3.5938,6.9873-7.5869,13.2764-7.5869,8.4853,0,13.6758,3.394,16.1709,8.6845,2.8955-3.893,7.1875-8.6845,14.0752-8.6845,12.7773,0,18.0683,7.6865,18.0683,17.7685V72.6987c0,2.9947.1993,11.28,1.3975,13.5762A5.9107,5.9107,0,0,0,330.043,88.67H313.7715a5.241,5.241,0,0,0,3.5937-2.4956c1.3975-2.3955,1.4971-11.28,1.4971-14.3745l-.1-11.7793c0-6.0889-1.7969-17.6685-12.4775-17.6685-6.5889,0-10.3819,4.4922-12.877,8.4849a21.61,21.61,0,0,1,1.2979,7.7861V72.6987c0,2.9947.1992,11.28,1.3974,13.5762a5.9056,5.9056,0,0,0,3.6934,2.3955H283.5254a5.241,5.241,0,0,0,3.5937-2.4956c1.3975-2.3955,1.4971-11.28,1.4971-14.3745l-.1-11.7793c0-6.0889-1.7969-17.6685-12.3779-17.6685-6.4883,0-10.1817,4.1924-12.7774,8.0855l.1,9.4834-.1,13.8755c0,2.895,0,10.1816,1.2979,12.478a5.019,5.019,0,0,0,3.5937,2.3955H252.0811a5.4123,5.4123,0,0,0,3.7929-2.4956c1.2979-2.7949,1.2979-10.3814,1.2979-13.6758,0-13.1767.3994-22.66-1.3975-26.9521A8.727,8.727,0,0,0,250.085,41.9531Z"/><path d="M333.8567,89.17H309.71l3.94-.9851a4.7028,4.7028,0,0,0,3.281-2.2586c.91-1.56,1.4311-6.708,1.4311-14.1264l-.1-11.7751c0-4.0317-.8637-17.1727-11.9775-17.1727-6.4124,0-10.0933,4.5251-12.3208,8.04a22.1562,22.1562,0,0,1,1.2417,7.7312V72.6987c0,3.727.28,11.3124,1.3407,13.3449a5.345,5.345,0,0,0,3.3789,2.1437l3.6873.9831H279.4638l3.94-.9851a4.7028,4.7028,0,0,0,3.281-2.2586c.91-1.56,1.4311-6.708,1.4311-14.1264l-.1-11.7751c0-4.0317-.8565-17.1727-11.8779-17.1727-6.2365,0-9.8362,4.1049-12.2758,7.735l.098,9.3286-.1,13.8844c0,2.7451,0,10.0465,1.2332,12.2284a4.4977,4.4977,0,0,0,3.2564,2.1512l-.098.99H252.0811l-.0981-.99a4.8858,4.8858,0,0,0,3.4623-2.2625c1.2266-2.6482,1.2266-10.1957,1.2266-13.4186,0-2.131.01-4.1655.02-6.097.0509-9.9138.0877-17.09-1.3585-20.6125a8.1829,8.1829,0,0,0-5.3507-3.3469l-3.26-.6791,3.3159-.3082.0463.4978-.0346-.4989c4.2283-.393,8.6006-.7994,13.3109-.7994h.5v6.4046c2.8642-3.32,6.8529-6.7044,12.7764-6.7044,7.7646,0,13.3653,2.8455,16.2564,8.2423,3.0535-3.97,7.3759-8.2423,13.99-8.2423,11.8,0,18.5683,6.6586,18.5683,18.2685V72.6987c0,3.727.28,11.3124,1.3408,13.3449a5.35,5.35,0,0,0,3.3789,2.1437Zm-17.6439-1h11.351a5.0821,5.0821,0,0,1-1.64-1.6333c-1.4308-2.74-1.4717-12.71-1.4717-13.8384V58.6235c0-6.4492-2.2824-17.2685-17.5683-17.2685-6.5276,0-10.7365,4.5334-13.674,8.4829l-.4977.6692-.3557-.7543c-2.5911-5.4939-8.0265-8.3978-15.7187-8.3978-6.139,0-10.1118,3.955-12.887,7.4005l-.8894,1.1043V41.6563c-3.5919.022-6.9987.2771-10.3.5718a8.8225,8.8225,0,0,1,3.623,3.0321l.0515.0936c1.5457,3.6924,1.5084,10.9745,1.4566,21.0533-.01,1.93-.02,3.9627-.02,6.0919,0,3.5676,0,10.9913-1.3444,13.8864a5.5709,5.5709,0,0,1-1.6766,1.785h11.074a5.0256,5.0256,0,0,1-1.5-1.6476c-1.2088-2.1387-1.3637-7.9243-1.3637-12.7259l.1-13.8791L262.86,50.289l.0856-.1284c2.5791-3.8681,6.4094-8.3081,13.1934-8.3081,11.9492,0,12.8779,13.9064,12.8779,18.1685l.1,11.7751c0,4.4647-.2033,12.2962-1.5652,14.6307a5.1635,5.1635,0,0,1-1.5843,1.7436h11.35a5.0731,5.0731,0,0,1-1.6394-1.6336c-1.4307-2.7393-1.4715-12.71-1.4715-13.8381V58.6235a20.9149,20.9149,0,0,0-1.2635-7.6039l-.0916-.234.1332-.2132c2.3393-3.7433,6.2632-8.72,13.301-8.72,12.0416,0,12.9775,13.9064,12.9775,18.1685l.1,11.7751c0,4.4647-.2033,12.2962-1.5652,14.6307A5.1635,5.1635,0,0,1,316.2128,88.17Z"/><path d="M137.5332,109.2266v4.7246h-1.1846v-10.5h1.1846v4.665h6.0606v-4.665h1.1845v10.5h-1.1845v-4.7246Z"/><path d="M144.9033,114.0762h-1.4345v-4.7246h-5.8106v4.7246h-1.4346v-10.75h1.4346v4.665h5.8106v-4.665h1.4345Zm-1.1845-.25h.9345v-10.25h-.9345v4.665h-6.3106v-4.665h-.9346v10.25h.9346v-4.7246h6.3106Z"/><path d="M163.5283,113.9512h-1.2744l-1.23-2.7754h-5.7148l-1.2451,2.7754h-1.2149l4.7852-10.5752h1.11Zm-5.3545-9.18-2.4,5.3545h4.7852Z"/><path d="M163.7221,114.0762h-1.55l-1.23-2.7754H155.39l-1.2451,2.7754h-1.4895l4.8982-10.8252h1.2717Zm-1.3869-.25h.9994l-4.6711-10.3252h-.9491l-4.672,10.3252h.94l1.2452-2.7754h5.8771Zm-1.5841-3.5752H155.58l2.5938-5.7859Zm-4.7846-.25h4.4l-2.1927-4.9231Z"/><path d="M172.8887,103.4512v10.5h-1.1856v-10.5Z"/><path d="M173.0137,114.0762h-1.4356v-10.75h1.4356Zm-1.1856-.25h.9356v-10.25h-.9356Z"/><path d="M189.1934,113.9512l-3.045-4.08h-3v4.08h-1.1845v-10.5h4.5146a5.0783,5.0783,0,0,1,1.5674.2256,3.5207,3.5207,0,0,1,1.1924.6376,2.8479,2.8479,0,0,1,.7656.99,2.9952,2.9952,0,0,1,.27,1.2832,3.1161,3.1161,0,0,1-.21,1.1777,2.6778,2.6778,0,0,1-.5928.9,3.3305,3.3305,0,0,1-.9072.6387,4.2154,4.2154,0,0,1-1.14.3594l3.2246,4.2871Zm-.8116-8.8555a3.1688,3.1688,0,0,0-1.9853-.55h-3.2481v4.2754h3.2334a3.7009,3.7009,0,0,0,1.0821-.15,2.6467,2.6467,0,0,0,.8574-.43,1.9534,1.9534,0,0,0,.5644-.6846,2.0324,2.0324,0,0,0,.2032-.9179A1.844,1.844,0,0,0,188.3818,105.0957Z"/><path d="M190.8989,114.0762h-1.7682l-3.0449-4.08h-2.8124v4.08h-1.4345v-10.75h4.64a5.227,5.227,0,0,1,1.6059.2316,3.6582,3.6582,0,0,1,1.234.6607,2.9824,2.9824,0,0,1,.7987,1.033,3.1346,3.1346,0,0,1,.2813,1.3364,3.2531,3.2531,0,0,1-.2191,1.2247,2.8136,2.8136,0,0,1-.62.9418,3.4758,3.4758,0,0,1-.9407.6626,4.2958,4.2958,0,0,1-.9742.332Zm-1.6429-.25h1.142l-3.1975-4.2511.2024-.0343a4.1037,4.1037,0,0,0,1.1061-.3486,3.221,3.221,0,0,0,.8731-.6144,2.5636,2.5636,0,0,0,.5655-.859,3.0057,3.0057,0,0,0,.2008-1.1309,2.8863,2.8863,0,0,0-.2577-1.23,2.7345,2.7345,0,0,0-.7323-.947,3.4087,3.4087,0,0,0-1.1508-.6148,4.9761,4.9761,0,0,0-1.5291-.22h-4.39v10.25h.9345v-4.08h3.1877Zm-2.8742-4.88h-3.3584v-4.5254h3.3731a3.3027,3.3027,0,0,1,2.062.5761h0a1.97,1.97,0,0,1,.7553,1.6417,2.163,2.163,0,0,1-.2163.9737,2.0908,2.0908,0,0,1-.6.7279,2.7815,2.7815,0,0,1-.8973.45A3.8391,3.8391,0,0,1,186.3818,108.9463Zm-3.1084-.25h3.1084a3.5906,3.5906,0,0,0,1.0456-.145,2.534,2.534,0,0,0,.8175-.409,1.8178,1.8178,0,0,0,.529-.6416,1.9158,1.9158,0,0,0,.19-.862,1.71,1.71,0,0,0-.6587-1.4443h0a3.0657,3.0657,0,0,0-1.9087-.5235h-3.1231Z"/><path d="M215.1768,103.6387a3.3836,3.3836,0,0,1,1.0781.5254,2.27,2.27,0,0,1,.6885.8242,2.4316,2.4316,0,0,1,.24,1.0879,2.6683,2.6683,0,0,1-.1426.915,2.4256,2.4256,0,0,1-.3818.69,2.4973,2.4973,0,0,1-.5313.502,3.4674,3.4674,0,0,1-.6054.3379,4.6256,4.6256,0,0,1,.8759.3525,2.9005,2.9005,0,0,1,.711.5176,2.2645,2.2645,0,0,1,.48.72,2.4326,2.4326,0,0,1,.18.96,2.6824,2.6824,0,0,1-.27,1.2148,2.488,2.488,0,0,1-.7715.9073,3.6763,3.6763,0,0,1-1.205.5625,5.796,5.796,0,0,1-1.5577.1953h-4.6562v-10.5H213.77A4.9138,4.9138,0,0,1,215.1768,103.6387Zm.1484,4.0107a1.6326,1.6326,0,0,0,.6728-1.416,1.52,1.52,0,0,0-.5986-1.2656,2.7483,2.7483,0,0,0-1.72-.4668h-3.1865v3.63H213.59A2.9124,2.9124,0,0,0,215.3252,107.6494Zm.5693,4.7549a1.6259,1.6259,0,0,0,.6885-1.4,1.5318,1.5318,0,0,0-.7031-1.3486,3.7407,3.7407,0,0,0-2.08-.4737h-3.3066v3.72H214.01A3.1659,3.1659,0,0,0,215.8945,112.4043Z"/><path d="M213.9648,114.0762h-4.7812v-10.75H213.77a5.0616,5.0616,0,0,1,1.443.1927,3.5229,3.5229,0,0,1,1.1175.5453,2.4021,2.4021,0,0,1,.7256.869,2.5647,2.5647,0,0,1,.253,1.143,2.802,2.802,0,0,1-.15.9578,2.56,2.56,0,0,1-.4016.7257,2.6347,2.6347,0,0,1-.5579.5268,3.7456,3.7456,0,0,1-.3434.2119,4.7023,4.7023,0,0,1,.6013.2651,3.0418,3.0418,0,0,1,.7412.54,2.4036,2.4036,0,0,1,.5058.7587,2.57,2.57,0,0,1,.19,1.0092,2.8213,2.8213,0,0,1-.2827,1.2706,2.6206,2.6206,0,0,1-.81.9524,3.815,3.815,0,0,1-1.2455.582A5.9486,5.9486,0,0,1,213.9648,114.0762Zm-4.5312-.25h4.5312a5.6987,5.6987,0,0,0,1.5241-.1908,3.5668,3.5668,0,0,0,1.1647-.5428,2.3743,2.3743,0,0,0,.7336-.8623,2.5734,2.5734,0,0,0,.2564-1.159,2.3193,2.3193,0,0,0-.17-.9111,2.1543,2.1543,0,0,0-.4528-.68,2.7925,2.7925,0,0,0-.6808-.4954,4.54,4.54,0,0,0-.8526-.3431l-.3348-.0972.32-.1377a3.3514,3.3514,0,0,0,.5836-.3257,2.3833,2.3833,0,0,0,.5048-.4773,2.3108,2.3108,0,0,0,.3621-.6552,2.5577,2.5577,0,0,0,.135-.8722,2.3158,2.3158,0,0,0-.2274-1.0327,2.1539,2.1539,0,0,0-.6513-.7794,3.2774,3.2774,0,0,0-1.0389-.5057,4.8157,4.8157,0,0,0-1.3715-.1822h-4.3359Zm4.5762-.8h-3.6416v-3.97H213.8a3.8748,3.8748,0,0,1,2.15.495,1.6571,1.6571,0,0,1,.7583,1.4523,1.7517,1.7517,0,0,1-.74,1.5018A3.3,3.3,0,0,1,214.01,113.0264Zm-3.3916-.25H214.01a3.0607,3.0607,0,0,0,1.8116-.4735,1.4951,1.4951,0,0,0,.6366-1.299,1.4026,1.4026,0,0,0-.648-1.245,3.6419,3.6419,0,0,0-2.01-.4523h-3.1816Zm2.9716-4.52h-3.2216v-3.88H213.68a2.8785,2.8785,0,0,1,1.7966.4932,1.6458,1.6458,0,0,1,.6467,1.3642,1.7568,1.7568,0,0,1-.725,1.5176l0,0A3.0481,3.0481,0,0,1,213.59,108.2559Zm-2.9716-.25H213.59a2.8057,2.8057,0,0,0,1.6627-.4582h0a1.5008,1.5008,0,0,0,.62-1.3143,1.3894,1.3894,0,0,0-.55-1.1671,2.6424,2.6424,0,0,0-1.6428-.44h-3.0615Z"/><path d="M233.3682,113.9512l-3.045-4.08h-3v4.08h-1.1845v-10.5h4.5146a5.0783,5.0783,0,0,1,1.5674.2256,3.5207,3.5207,0,0,1,1.1924.6376,2.8479,2.8479,0,0,1,.7656.99,2.9952,2.9952,0,0,1,.27,1.2832,3.1161,3.1161,0,0,1-.21,1.1777,2.6778,2.6778,0,0,1-.5928.9,3.3305,3.3305,0,0,1-.9072.6387,4.2154,4.2154,0,0,1-1.14.3594l3.2246,4.2871Zm-.8116-8.8555a3.1688,3.1688,0,0,0-1.9853-.55h-3.2481v4.2754h3.2334a3.7009,3.7009,0,0,0,1.0821-.15,2.6467,2.6467,0,0,0,.8574-.43,1.9534,1.9534,0,0,0,.5644-.6846,2.0324,2.0324,0,0,0,.2032-.9179A1.844,1.844,0,0,0,232.5566,105.0957Z"/><path d="M235.0737,114.0762h-1.7682l-3.0449-4.08h-2.8124v4.08h-1.4345v-10.75h4.64a5.227,5.227,0,0,1,1.6059.2316,3.6582,3.6582,0,0,1,1.234.6607,2.9836,2.9836,0,0,1,.7987,1.033,3.1346,3.1346,0,0,1,.2813,1.3364,3.2531,3.2531,0,0,1-.2191,1.2247,2.8136,2.8136,0,0,1-.62.9418,3.4758,3.4758,0,0,1-.9407.6626,4.2958,4.2958,0,0,1-.9742.332Zm-1.6429-.25h1.142l-3.1975-4.2511.2025-.0343a4.1031,4.1031,0,0,0,1.106-.3486,3.221,3.221,0,0,0,.8731-.6144,2.5636,2.5636,0,0,0,.5655-.859,3.0057,3.0057,0,0,0,.2008-1.1309,2.8863,2.8863,0,0,0-.2577-1.23,2.7345,2.7345,0,0,0-.7323-.947,3.4087,3.4087,0,0,0-1.1508-.6148,4.9761,4.9761,0,0,0-1.5291-.22h-4.39v10.25h.9345v-4.08h3.1877Zm-2.8742-4.88h-3.3584v-4.5254h3.3731a3.3027,3.3027,0,0,1,2.062.5761h0a1.97,1.97,0,0,1,.7553,1.6417,2.163,2.163,0,0,1-.2163.9737,2.0908,2.0908,0,0,1-.6.7279,2.7815,2.7815,0,0,1-.8973.45A3.8391,3.8391,0,0,1,230.5566,108.9463Zm-3.1084-.25h3.1084a3.5906,3.5906,0,0,0,1.0456-.145,2.534,2.534,0,0,0,.8175-.409,1.8191,1.8191,0,0,0,.5291-.6416,1.9171,1.9171,0,0,0,.19-.862,1.71,1.71,0,0,0-.6587-1.4443h0a3.0655,3.0655,0,0,0-1.9087-.5235h-3.1231Z"/><path d="M244.2734,103.4512v10.5h-1.1855v-10.5Z"/><path d="M244.3984,114.0762h-1.4355v-10.75h1.4355Zm-1.1855-.25h.9355v-10.25h-.9355Z"/><path d="M254.3828,106.74a1.3411,1.3411,0,0,0,.4356.5479,3.2007,3.2007,0,0,0,.87.4512,10.4976,10.4976,0,0,0,1.4248.3828,6.1955,6.1955,0,0,1,2.5879,1.082,2.3442,2.3442,0,0,1,.832,1.9072,2.77,2.77,0,0,1-1.002,2.1787,3.2844,3.2844,0,0,1-1.1279.6006,4.7108,4.7108,0,0,1-1.44.211,6.2718,6.2718,0,0,1-2.3018-.4073,6.5113,6.5113,0,0,1-1.9882-1.2578l.7353-.87a6.1836,6.1836,0,0,0,1.665,1.1172,4.7846,4.7846,0,0,0,1.9346.3672,2.7059,2.7059,0,0,0,1.7031-.4951,1.5778,1.5778,0,0,0,.6377-1.3077,1.7475,1.7475,0,0,0-.12-.6679,1.3456,1.3456,0,0,0-.4219-.5332,2.9788,2.9788,0,0,0-.8339-.4356,10.5506,10.5506,0,0,0-1.3614-.376,10.8255,10.8255,0,0,1-1.5713-.4511,3.8878,3.8878,0,0,1-1.1045-.6153,2.2465,2.2465,0,0,1-.6464-.8418,2.8245,2.8245,0,0,1-.211-1.1416,2.6168,2.6168,0,0,1,.2549-1.1562,2.6863,2.6863,0,0,1,.7207-.9092,3.478,3.478,0,0,1,1.0947-.6006,4.19,4.19,0,0,1,1.38-.2187,5.83,5.83,0,0,1,2.0176.3183,6.13,6.13,0,0,1,1.6729.9571l-.69.915a5.1345,5.1345,0,0,0-1.4775-.87,4.5159,4.5159,0,0,0-1.5528-.2695,2.9559,2.9559,0,0,0-.9218.1347,2.3379,2.3379,0,0,0-.7051.36,1.55,1.55,0,0,0-.45.541,1.4871,1.4871,0,0,0-.1572.6758A1.8086,1.8086,0,0,0,254.3828,106.74Z"/><path d="M256.9629,114.2266a6.4243,6.4243,0,0,1-2.3473-.4159,6.6676,6.6676,0,0,1-2.0263-1.2812l-.09-.0811.8973-1.0617.0959.0872a6.0912,6.0912,0,0,0,1.631,1.0952,4.6814,4.6814,0,0,0,1.8845.3567,2.5983,2.5983,0,0,0,1.6265-.4689,1.4468,1.4468,0,0,0,.5893-1.2089,1.633,1.633,0,0,0-.1107-.6205,1.2317,1.2317,0,0,0-.3841-.4828,2.87,2.87,0,0,0-.7991-.416,10.4419,10.4419,0,0,0-1.345-.3712,10.9983,10.9983,0,0,1-1.5894-.4566,4.0279,4.0279,0,0,1-1.1395-.6357,2.3826,2.3826,0,0,1-.6814-.8882,2.961,2.961,0,0,1-.2213-1.1915,2.7517,2.7517,0,0,1,.2674-1.2107,2.8243,2.8243,0,0,1,.7537-.9512,3.6164,3.6164,0,0,1,1.1336-.6223,4.3331,4.3331,0,0,1,1.4205-.2255,5.9789,5.9789,0,0,1,2.0608.326,6.28,6.28,0,0,1,1.707.9762l.0961.0758L259.55,105.67l-.1006-.082a5.0369,5.0369,0,0,0-1.4413-.8495,4.4111,4.4111,0,0,0-1.51-.262,2.8428,2.8428,0,0,0-.8829.1285,2.2177,2.2177,0,0,0-.6678.3407,1.431,1.431,0,0,0-.4145.4976,1.355,1.355,0,0,0-.1441.62,1.6952,1.6952,0,0,0,.11.63,1.2241,1.2241,0,0,0,.3967.496,3.0948,3.0948,0,0,0,.8359.4321,10.4106,10.4106,0,0,0,1.4071.3778,6.3465,6.3465,0,0,1,2.6424,1.1082,2.4722,2.4722,0,0,1,.8772,2.0034,2.8958,2.8958,0,0,1-1.0469,2.2747,3.4217,3.4217,0,0,1-1.17.6237A4.8581,4.8581,0,0,1,256.9629,114.2266Zm-4.1157-1.8027a6.3531,6.3531,0,0,0,1.8593,1.1539,6.1754,6.1754,0,0,0,2.2564.3988,4.609,4.609,0,0,0,1.4024-.2051,3.1761,3.1761,0,0,0,1.0857-.5773,2.6459,2.6459,0,0,0,.9572-2.0829,2.2335,2.2335,0,0,0-.7868-1.811,6.11,6.11,0,0,0-2.5353-1.0562,10.6322,10.6322,0,0,1-1.44-.3874,3.3344,3.3344,0,0,1-.9046-.47,1.4691,1.4691,0,0,1-.4743-.6,1.9422,1.9422,0,0,1-.1281-.7232,1.6207,1.6207,0,0,1,.17-.7317,1.68,1.68,0,0,1,.4857-.5842,2.47,2.47,0,0,1,.7426-.38,3.0911,3.0911,0,0,1,.9606-.1409,4.6623,4.6623,0,0,1,1.5954.277,5.1814,5.1814,0,0,1,1.4126.81l.5386-.7139a5.966,5.966,0,0,0-1.5419-.863,5.732,5.732,0,0,0-1.9744-.3106,4.0836,4.0836,0,0,0-1.3389.2118,3.3664,3.3664,0,0,0-1.056.5789,2.5724,2.5724,0,0,0-.6879.8673,2.504,2.504,0,0,0-.2424,1.1017,2.715,2.715,0,0,0,.2,1.0914,2.1355,2.1355,0,0,0,.6116.7956,3.784,3.784,0,0,0,1.0694.5949,10.7776,10.7776,0,0,0,1.5533.4458,10.69,10.69,0,0,1,1.378.3808,3.1092,3.1092,0,0,1,.8689.4553,1.4765,1.4765,0,0,1,.4593.5829,1.8806,1.8806,0,0,1,.13.7158,1.7041,1.7041,0,0,1-.6858,1.4063,2.8393,2.8393,0,0,1-1.78.5215,4.9282,4.9282,0,0,1-1.9847-.3777,6.2327,6.2327,0,0,1-1.6024-1.0528Z"/><path d="M274.8164,103.6387a3.3826,3.3826,0,0,1,1.0781.5254,2.27,2.27,0,0,1,.6885.8242,2.43,2.43,0,0,1,.24,1.0879,2.6684,2.6684,0,0,1-.1425.915,2.4259,2.4259,0,0,1-.3819.69,2.4969,2.4969,0,0,1-.5312.502,3.4682,3.4682,0,0,1-.6055.3379,4.6239,4.6239,0,0,1,.876.3525,2.9019,2.9019,0,0,1,.7109.5176,2.2645,2.2645,0,0,1,.4795.72,2.4308,2.4308,0,0,1,.18.96,2.6824,2.6824,0,0,1-.27,1.2148,2.488,2.488,0,0,1-.7715.9073,3.6768,3.6768,0,0,1-1.2051.5625,5.7953,5.7953,0,0,1-1.5576.1953h-4.6563v-10.5h4.461A4.9131,4.9131,0,0,1,274.8164,103.6387Zm.1484,4.0107a1.6324,1.6324,0,0,0,.6729-1.416,1.52,1.52,0,0,0-.5986-1.2656,2.7486,2.7486,0,0,0-1.72-.4668h-3.1865v3.63H273.23A2.9123,2.9123,0,0,0,274.9648,107.6494Zm.5694,4.7549a1.6259,1.6259,0,0,0,.6885-1.4,1.5316,1.5316,0,0,0-.7032-1.3486,3.74,3.74,0,0,0-2.08-.4737h-3.3067v3.72h3.5166A3.1661,3.1661,0,0,0,275.5342,112.4043Z"/><path d="M273.6045,114.0762h-4.7813v-10.75h4.586a5.06,5.06,0,0,1,1.4429.1927,3.5235,3.5235,0,0,1,1.1176.5453,2.4018,2.4018,0,0,1,.7255.869,2.5634,2.5634,0,0,1,.253,1.143,2.8045,2.8045,0,0,1-.15.9578,2.56,2.56,0,0,1-.4017.7257,2.6343,2.6343,0,0,1-.5578.5268,3.7471,3.7471,0,0,1-.3435.2119,4.6975,4.6975,0,0,1,.6014.2651,3.0393,3.0393,0,0,1,.7411.54,2.4019,2.4019,0,0,1,.5058.7587,2.5682,2.5682,0,0,1,.19,1.0092,2.82,2.82,0,0,1-.2827,1.2706,2.6206,2.6206,0,0,1-.81.9524,3.8134,3.8134,0,0,1-1.2454.582A5.9491,5.9491,0,0,1,273.6045,114.0762Zm-4.5313-.25h4.5313a5.6992,5.6992,0,0,0,1.5241-.1908,3.5662,3.5662,0,0,0,1.1646-.5428,2.3734,2.3734,0,0,0,.7336-.8623,2.5734,2.5734,0,0,0,.2564-1.159,2.3211,2.3211,0,0,0-.17-.9111,2.1529,2.1529,0,0,0-.4529-.68,2.7906,2.7906,0,0,0-.6808-.4954,4.5361,4.5361,0,0,0-.8525-.3431l-.3349-.0972.32-.1377a3.3522,3.3522,0,0,0,.5837-.3257,2.3857,2.3857,0,0,0,.5048-.4773,2.313,2.313,0,0,0,.362-.6552,2.5577,2.5577,0,0,0,.135-.8722,2.3171,2.3171,0,0,0-.2273-1.0327,2.1559,2.1559,0,0,0-.6513-.7794,3.2774,3.2774,0,0,0-1.0389-.5057,4.8162,4.8162,0,0,0-1.3715-.1822h-4.336Zm4.5762-.8h-3.6416v-3.97H273.44a3.8742,3.8742,0,0,1,2.15.495,1.657,1.657,0,0,1,.7584,1.4523,1.7515,1.7515,0,0,1-.74,1.5018A3.3,3.3,0,0,1,273.6494,113.0264Zm-3.3916-.25h3.3916a3.0608,3.0608,0,0,0,1.8117-.4735,1.4954,1.4954,0,0,0,.6366-1.299,1.4025,1.4025,0,0,0-.6481-1.245,3.6417,3.6417,0,0,0-2.01-.4523h-3.1817Zm2.9717-4.52h-3.2217v-3.88h3.3115a2.8783,2.8783,0,0,1,1.7966.4932,1.6457,1.6457,0,0,1,.6468,1.3642,1.7568,1.7568,0,0,1-.725,1.5176l0,0A3.0485,3.0485,0,0,1,273.23,108.2559Zm-2.9717-.25H273.23a2.8056,2.8056,0,0,0,1.6626-.4582h0a1.5009,1.5009,0,0,0,.6206-1.3143,1.39,1.39,0,0,0-.55-1.1671,2.6427,2.6427,0,0,0-1.6429-.44h-3.0615Z"/><path d="M295.5576,113.9512h-1.2744l-1.2305-2.7754h-5.7148l-1.2451,2.7754h-1.2149l4.7852-10.5752h1.11Zm-5.3545-9.18-2.4,5.3545h4.7852Z"/><path d="M295.7514,114.0762h-1.5495l-1.2305-2.7754h-5.5526l-1.2451,2.7754h-1.49l4.8983-10.8252h1.2716Zm-1.3869-.25h.9994l-4.6711-10.3252h-.9491l-4.672,10.3252h.94l1.2452-2.7754h5.8771ZM292.78,110.251H287.61l2.5938-5.7859Zm-4.7846-.25h4.4l-2.1926-4.9231Z"/><path d="M311.3525,103.4512h1.1553v10.5h-.9453l-6.78-8.61v8.61h-1.1543v-10.5h1.1094l6.6152,8.415Z"/><path d="M312.6328,114.0762h-1.131l-6.5946-8.3746v8.3746h-1.4043v-10.75h1.2951l6.43,8.1787v-8.1787h1.4053Zm-1.01-.25h.76v-10.25h-.9053v8.6513l-6.8009-8.6513h-.9237v10.25h.9043V104.98Z"/><path d="M329.0674,104.5312h-6.4053v3.585h5.7305v1.08h-5.7305v3.6748h6.4805v1.08h-7.6651v-10.5h7.59Z"/><path d="M329.2676,114.0762h-7.9151v-10.75h7.84v1.33h-6.4053v3.335h5.7305v1.33h-5.7305v3.4248h6.4805Zm-7.6651-.25h7.4151v-.83h-6.4805v-3.9248h5.7305v-.83h-5.7305v-3.835h6.4053v-.83h-7.34Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M6 14 14 6M7.5 6H14v6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 20 20"><path d="M6.6 3.2 8.4 6.6a1 1 0 0 1-.2 1.2L7 8.9a9.5 9.5 0 0 0 4.1 4.1l1.1-1.2a1 1 0 0 1 1.2-.2l3.4 1.8a1 1 0 0 1 .5 1.1l-.5 2a1.4 1.4 0 0 1-1.5 1C8.5 17.2 2.8 11.5 2.5 4.7a1.4 1.4 0 0 1 1-1.5l2-.5a1 1 0 0 1 1.1.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 20 20"><path d="M3.5 5.5A2 2 0 0 1 5.5 3.5h9a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-3.5 3v-3h0a2 2 0 0 1-2-2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 20 20"><path d="M10 17.5s5.5-5 5.5-9.5a5.5 5.5 0 0 0-11 0c0 4.5 5.5 9.5 5.5 9.5Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top dark" id="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Elysium Hair Brisbane, home"><svg viewBox="0 0 348.86 132.52" aria-hidden="true"><use href="#elysium"/></svg></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#menu">Services &amp; prices</a>
+      <a href="#match">Stylists</a>
+      <a href="#ritual">The visit</a>
+      <a href="#visit">Hours &amp; location</a>
+    </nav>
+    <a class="top-call num" href="tel:0732290816">07 3229 0816</a>
+    <a class="btn btn-champ" href="#book">Book online</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero dark" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1 id="h1">Beautiful blondes. Bespoke colour. <em>A stylist matched to&nbsp;you.</em></h1>
+      <p class="lede"><strong>Seven-time Australian Salon of the Year</strong>, on Adelaide Street in Brisbane City. Tell us about your hair and we pair you with the hairdresser best suited to it. Unhurried consults, no intimidating salon energy.</p>
+      <div class="cta-row">
+        <a class="btn btn-champ" href="#book">Book online <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="https://phorest.com/book/salons/elysiumhairbrisbane/book/consultations/form?lead_source=WEBSITE" target="_blank" rel="noopener">Free consultation</a>
+      </div>
+      <p class="status" id="status"><span><span class="dot" aria-hidden="true"></span><b id="status-main">Open Tuesday to Friday</b> <span id="status-sub">· till 8pm Tue–Thu</span></span><span>Open till 8pm Tue–Thu · 15 Adelaide St, Brisbane City</span></p>
+    </div>
+
+    <div class="shade">
+      <figure class="strip lift" aria-label="Real colour work from the Elysium chair, from black to platinum">
+        <div class="swatch" tabindex="0" style="--i:0;--pos:50% 55%;--mpos:50% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/475032dced330141e33f926eb8c746be.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/475032dced330141e33f926eb8c746be.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/475032dced330141e33f926eb8c746be.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/475032dced330141e33f926eb8c746be.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Glossy jet-black waves, finished at Elysium." decoding="async"><span>Black</span></div>
+        <div class="swatch" tabindex="0" style="--i:1;--pos:12% 70%;--mpos:12% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/37009483b58a01cc6896c4b64b0be687.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/37009483b58a01cc6896c4b64b0be687.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/37009483b58a01cc6896c4b64b0be687.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/37009483b58a01cc6896c4b64b0be687.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Long dark brunette layers, finished at Elysium." decoding="async"><span>Brunette</span></div>
+        <div class="swatch" tabindex="0" style="--i:2;--pos:40% 60%;--mpos:40% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/82cf136451752fafa496b9d9972954ac.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/82cf136451752fafa496b9d9972954ac.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/82cf136451752fafa496b9d9972954ac.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/82cf136451752fafa496b9d9972954ac.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Rich chocolate brown waves, finished at Elysium." decoding="async"><span>Chocolate</span></div>
+        <div class="swatch" tabindex="0" style="--i:3;--pos:50% 60%;--mpos:50% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/3f2780156b028e70a372871381c4f41a.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/3f2780156b028e70a372871381c4f41a.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/3f2780156b028e70a372871381c4f41a.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/3f2780156b028e70a372871381c4f41a.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Toffee brown beach waves, finished at Elysium." decoding="async"><span>Toffee</span></div>
+        <div class="swatch" tabindex="0" style="--i:4;--pos:45% 60%;--mpos:45% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/24ea4d9f33fbd1196c7bfe7e6ea21219.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/24ea4d9f33fbd1196c7bfe7e6ea21219.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/24ea4d9f33fbd1196c7bfe7e6ea21219.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/24ea4d9f33fbd1196c7bfe7e6ea21219.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Soft bronde balayage, finished at Elysium." decoding="async"><span>Bronde</span></div>
+        <div class="swatch" tabindex="0" style="--i:5;--pos:50% 55%;--mpos:50% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/7f9d34fab83d1764cd233d8f18765cb5.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/7f9d34fab83d1764cd233d8f18765cb5.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/7f9d34fab83d1764cd233d8f18765cb5.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/7f9d34fab83d1764cd233d8f18765cb5.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Caramel balayage waves, finished at Elysium." decoding="async"><span>Caramel</span></div>
+        <div class="swatch" tabindex="0" style="--i:6;--pos:50% 60%;--mpos:50% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/be1b9fcc800366b753d1dfadcd5020a1.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/be1b9fcc800366b753d1dfadcd5020a1.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/be1b9fcc800366b753d1dfadcd5020a1.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/be1b9fcc800366b753d1dfadcd5020a1.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Vivid copper, long and wavy, finished at Elysium." decoding="async"><span>Copper</span></div>
+        <div class="swatch" tabindex="0" style="--i:7;--pos:10% 92%;--mpos:10% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/257cca614a5e19a0e8b0057847515de5.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/257cca614a5e19a0e8b0057847515de5.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/257cca614a5e19a0e8b0057847515de5.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/257cca614a5e19a0e8b0057847515de5.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Honey blonde with face-framing pieces, finished at Elysium." decoding="async"><span>Honey</span></div>
+        <div class="swatch" tabindex="0" style="--i:8;--pos:22% 75%;--mpos:22% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/1b00d783dd910e0b5f7c6e8f53021f9e.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/1b00d783dd910e0b5f7c6e8f53021f9e.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/1b00d783dd910e0b5f7c6e8f53021f9e.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/1b00d783dd910e0b5f7c6e8f53021f9e.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Sleek golden blonde, finished at Elysium." decoding="async"><span>Golden</span></div>
+        <div class="swatch" tabindex="0" style="--i:9;--pos:78% 60%;--mpos:78% 90%"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/68b777bb097b4c045b2943cd2cf77bcc.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/68b777bb097b4c045b2943cd2cf77bcc.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/68b777bb097b4c045b2943cd2cf77bcc.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/68b777bb097b4c045b2943cd2cf77bcc.webp 800w" sizes="(max-width:960px) 45vw, 22vw" alt="Bright platinum waves, finished at Elysium." decoding="async"><span>Platinum</span></div>
+      </figure>
+      <p class="shade-note"><span>Real work from the Elysium chair, black to platinum. <span class="hov">Hover a shade to look closer.</span><span class="tap">Swipe for more shades.</span></span><span class="scale" aria-hidden="true">Black <i></i> Platinum</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="match sec mist" id="match" aria-labelledby="match-h">
+  <div class="wrap">
+    <div class="match-copy">
+      <h2 class="h2" id="match-h">We match people, <em>not just colours.</em></h2>
+      <p class="intro">Every new guest is paired with the hairdresser best suited to their hair, their lifestyle and the result they're after. Less "next please", more of a proper conversation, and hair that works for your real life.</p>
+      <div class="cta-row">
+        <a class="btn btn-ink" href="https://app.joinmya.com/elysiumhairbrisbane" target="_blank" rel="noopener">Find my stylist: 5-minute survey <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line-ink" href="https://phorest.com/book/salons/elysiumhairbrisbane/book/consultations/form?lead_source=WEBSITE" target="_blank" rel="noopener">Free pre-visit consultation</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="roster-head"><h3>Your stylists</h3><span class="ph">Bios: placeholder</span></div>
+      <ul class="roster">
+        <li><span class="name">Carla</span><span class="role">Master Stylist &amp; Colour Specialist</span><span class="bio">Placeholder bio. Client to supply two lines on Carla's specialities.</span></li>
+        <li><span class="name">Christina</span><span class="role">Senior Stylist</span><span class="bio">Placeholder bio. Client to supply.</span></li>
+        <li><span class="name">Maddie</span><span class="role">Advanced Stylist</span><span class="bio">Placeholder bio. Client to supply.</span></li>
+        <li><span class="name">Yumi</span><span class="role">Advanced Stylist</span><span class="bio">Placeholder bio. Client to supply.</span></li>
+        <li><span class="name">Shayla</span><span class="role">Advanced Stylist</span><span class="bio">Placeholder bio. Client to supply.</span></li>
+        <li><span class="name">Chellise &amp; Sophia</span><span class="role">Senior Salon Assistants</span><span class="bio">Placeholder bio. Client to supply.</span></li>
+        <li><span class="name">Oscar</span><span class="role">Owner</span><span class="bio">Placeholder bio. Client to supply.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="menu sec" id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <div class="menu-head">
+      <div>
+        <h2 class="h2" id="menu-h">Services &amp; prices, <em>upfront.</em></h2>
+        <p class="intro" style="margin-top:1.25rem">Prices depend on your hair's length and your stylist's level. Every colour includes Olaplex Step&nbsp;1 &amp;&nbsp;2. Your stylist confirms the exact quote at consultation.</p>
+      </div>
+      <div class="length">
+        <p id="len-label">Show colour prices for my hair length:</p>
+        <div class="seg" role="group" aria-labelledby="len-label">
+          <button type="button" data-len="s" aria-pressed="true">Short</button>
+          <button type="button" data-len="m" aria-pressed="false">Medium</button>
+          <button type="button" data-len="l" aria-pressed="false">Long</button>
+          <button type="button" data-len="x" aria-pressed="false">Extra long</button>
+        </div>
+        <p id="len-desc" aria-live="polite">Short: jaw line or above.</p>
+      </div>
+    </div>
+
+    <div class="menu-cols">
+      <div class="menu-group">
+        <h3>Colour <a href="#book" data-pick="balayage">Book colour</a></h3>
+        <div class="item"><span class="t">Balayage</span><span class="p"><small>from</small><span data-price="balayage">$155</span></span><span class="d">Our speciality. Five styles from Baby to Bombshell, each customised to you. Toner included.</span></div>
+        <div class="item"><span class="t">Foils</span><span class="p"><small>from</small><span data-price="foils">$180</span></span><span class="d">Classic foils, baby lights and micro foils, quarter to full head. Toner included.</span></div>
+        <div class="item"><span class="t">Permanent &amp; semi-permanent</span><span class="p"><small>from</small>$108</span><span class="d">L'Oréal INOA, ammonia free. T-section, regrowth, full head or creative.</span></div>
+        <div class="item"><span class="t">Add a haircut to foils or balayage</span><span class="p"><small>from</small>$34</span></div>
+      </div>
+
+      <div class="menu-group">
+        <h3>Cuts <a href="#book" data-pick="cut">Book a cut</a></h3>
+        <div class="item"><span class="t">New guest cut &amp; consultation</span><span class="p"><small>from</small>$229</span><span class="d">90 minutes. For first visits, if it's been 12+ weeks, or you want a change.</span></div>
+        <div class="item"><span class="t">Regular trim</span><span class="p"><small>from</small>$167</span><span class="d">70–80 minutes, for regular guests on a 4–6 week cycle.</span></div>
+        <div class="item"><span class="t">Short hair</span><span class="p"><small>from</small>$112</span><span class="d">35–50 minutes, for regular short-haired guests.</span></div>
+        <div class="item"><span class="t">Clipper tidy</span><span class="p"><small>from</small>$65</span><span class="d">20 minutes, without shampoo. Regular guests.</span></div>
+      </div>
+
+      <div class="menu-group">
+        <h3>Curls <a href="#book" data-pick="curly">Book curls</a></h3>
+        <div class="item"><span class="t">Curl by curl, new guests</span><span class="p"><small>from</small>$330</span><span class="d">Consultation, dry curl-by-curl cut, hydration, a styling lesson and dry off. Around 3 hours. Clever Curl products.</span></div>
+        <div class="item"><span class="t">Curl by curl, regular guests</span><span class="p"><small>from</small>$221</span><span class="d">Trim and hydration, with or without a diffused finish.</span></div>
+        <div class="item"><span class="t">Dusting</span><span class="p"><small>from</small>$65</span><span class="d">20 or 40 minute micro-trim between full appointments.</span></div>
+      </div>
+
+      <div class="menu-group">
+        <h3>Styling &amp; smoothing <a href="#book" data-pick="blowdry">Book styling</a></h3>
+        <div class="item"><span class="t">Blow-dry</span><span class="p"><small>from</small>$74</span><span class="d">Double shampoo, shiatsu lounge scalp massage, a finish of your choice and refreshments.</span></div>
+        <div class="item"><span class="t">The Style Bar</span><span class="p"><small>from</small>$45</span><span class="d">25–45 minutes on clean, dry hair: Hollywood Waves, Super Star Straight, Party Curls or It Girl Lob.</span></div>
+        <div class="item"><span class="t">Keratin smoothing</span><span class="p"><small>from</small>$348</span><span class="d">Guava Latino Brazilian smoothing, results 8–12 weeks. Not suitable for curly hair.</span></div>
+        <div class="item"><span class="t">Event styling</span><span class="p">Call or text</span><span class="d">Awards nights, galas, race days, headshots. Tuesday to Friday only, no weddings.</span></div>
+        <div class="item"><span class="t">Hair &amp; scalp rituals</span><span class="p">40+ options</span><span class="d">Hydration, bond repair, scalp detox, shine. Add to any service or book on its own.</span></div>
+      </div>
+    </div>
+
+    <div class="menu-notes">
+      <p><strong>Deposits come off your bill</strong>Online bookings take a redeemable deposit: $50 blow-dries, $100 cuts, $150 colour &amp; keratin, $20 Style Bar. Changes within 48 hours forfeit it.</p>
+      <p><strong>Pay your way</strong>Afterpay and Zip accepted on services and products. Every guest earns Elysium Rewards points that never expire.</p>
+      <p><strong>A $3 green cost</strong>Each visit carries a $3 contribution to Sustainable Salons. Up to 98% of our salon waste is recycled or repurposed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="prog sec dark" id="ritual" aria-labelledby="prog-h">
+  <div class="wrap">
+    <figure class="prog-photo">
+      <img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/e02fcfd2949b8303918d7a3cbe3bb52c.webp" width="800" height="533" loading="lazy" decoding="async" alt="The Elysium front desk on Adelaide Street, with shelves of professional haircare behind it.">
+      <figcaption>The front desk at 15 Adelaide Street.</figcaption>
+    </figure>
+    <div>
+      <h2 class="h2" id="prog-h">A blow-dry that's <em>actually a break.</em></h2>
+      <p class="intro" style="margin-top:1.25rem">What's in every blow-dry, from $74. For an interview, an event, or just because.</p>
+      <ol class="steps">
+        <li><div><b>A proper consultation</b><span>What you're wearing it to and how you like it to sit.</span></div></li>
+        <li><div><b>A double shampoo</b><span>With an optional treatment for hair and scalp.</span></div></li>
+        <li><div><b>The shiatsu massage lounge</b><span>A scalp massage while the conditioner does its work.</span></div></li>
+        <li><div><b>Your finish</b><span>Round brushes, GHDs, Steam Pods, wands or rollers.</span></div></li>
+        <li><div><b>Complimentary refreshments</b><span>Drinks, snacks, cheese plates and a seasonal cocktail. Think Moscato, Shiraz, Sauvignon Blanc, coffee or T2 tea.</span></div></li>
+      </ol>
+      <div class="prog-foot">
+        <a class="btn btn-champ" href="#book" data-pick="blowdry">Book a blow-dry <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <span>Rather not chat? Ask for a silent appointment.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof sec mist" aria-labelledby="award-h">
+  <div class="wrap">
+    <div class="award">
+      <h2 id="award-h">Seven times Australian Salon <em>of the Year.</em></h2>
+      <ul>
+        <li>3× Queensland Salon of the Year</li>
+        <li>3× Best Customer Care Award</li>
+        <li>2× Australian Hair Industry Awards Team of the Year</li>
+        <li>Voted #1 Best Hairdressers Brisbane, Courier Mail readers' choice</li>
+        <li>Style Magazine: Best Blonde, Best Balayage, Best Blow-Dry</li>
+        <li>Gold Salon Select, Australian Hairdressing Council</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="reviews-head">
+        <h3>In their words</h3>
+        <p><span class="ph">Placeholder rating</span> <span>Over 700 five-star reviews</span></p>
+      </div>
+      <div class="quotes">
+        <figure><blockquote>“I've never received so many compliments on my hair. Even after a full scalp bleach, my friends are always complimenting me on how healthy my hair looks.”</blockquote><figcaption>Elithea <span class="ph">Placeholder review</span></figcaption></figure>
+        <figure><blockquote>“I genuinely count down the days until my next appointment. It's my favourite treat to myself.”</blockquote><figcaption>Greer <span class="ph">Placeholder review</span></figcaption></figure>
+        <figure><blockquote>“Carla listened carefully to what I wanted, gave helpful advice and delivered a result I love.”</blockquote><figcaption>Rossana <span class="ph">Placeholder review</span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chair mist" aria-labelledby="chair-h">
+  <div class="wrap">
+    <div class="chair-head">
+      <h2 class="h2" id="chair-h">Fresh from <em>the chair.</em></h2>
+      <a class="btn btn-line-ink" href="https://www.instagram.com/elysiumhairbrisbane/" target="_blank" rel="noopener">More on Instagram <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="chair-grid">
+      <img class="g1" src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/2bcb8b25f4ef404c5608a73bc0f3ff58.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/2bcb8b25f4ef404c5608a73bc0f3ff58.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/2bcb8b25f4ef404c5608a73bc0f3ff58.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/2bcb8b25f4ef404c5608a73bc0f3ff58.webp 800w" sizes="(max-width:760px) 50vw, 30vw" alt="Defined natural curls, cut curl by curl." loading="lazy" decoding="async">
+      <img class="g2" src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/f456f4cd3bd70c770bd01a7bb8c2061a.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/f456f4cd3bd70c770bd01a7bb8c2061a.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/f456f4cd3bd70c770bd01a7bb8c2061a.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/f456f4cd3bd70c770bd01a7bb8c2061a.webp 800w" sizes="(max-width:760px) 50vw, 30vw" alt="Golden blonde curtain waves." loading="lazy" decoding="async">
+      <img class="g3" src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/8c034e9f994b881469f8779d263c20a0.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/8c034e9f994b881469f8779d263c20a0.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/8c034e9f994b881469f8779d263c20a0.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/8c034e9f994b881469f8779d263c20a0.webp 800w" sizes="(max-width:760px) 50vw, 30vw" alt="Copper with a bright blonde panel, half up." loading="lazy" decoding="async">
+      <img class="g4" src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/132c3abd7293670c63c2718b31ad5ed8.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/132c3abd7293670c63c2718b31ad5ed8.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/132c3abd7293670c63c2718b31ad5ed8.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/132c3abd7293670c63c2718b31ad5ed8.webp 800w" sizes="(max-width:760px) 50vw, 30vw" alt="Sleek beige blonde lob." loading="lazy" decoding="async">
+      <img class="g5" src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/ae5e2f4fc9ece70c013f7652a9e509cc.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/ae5e2f4fc9ece70c013f7652a9e509cc.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/ae5e2f4fc9ece70c013f7652a9e509cc.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/ae5e2f4fc9ece70c013f7652a9e509cc.webp 800w" sizes="(max-width:760px) 50vw, 30vw" alt="Layered copper with lighter ends." loading="lazy" decoding="async">
+      <img class="g6" src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/609161aa227d2dcf0267839849c522cf.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/609161aa227d2dcf0267839849c522cf.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/609161aa227d2dcf0267839849c522cf.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/609161aa227d2dcf0267839849c522cf.webp 800w" sizes="(max-width:760px) 50vw, 30vw" alt="Brunette balayage waves." loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<section class="book sec dark" id="book" aria-labelledby="book-h">
+  <div class="wrap">
+    <div class="book-intro">
+      <div>
+        <h2 class="h2" id="book-h">Book your chair <em>in three taps.</em></h2>
+      </div>
+      <p class="intro">Choose what you'd like, who with, and when suits. We'll show your starting price and deposit, then take you to our secure booking to pick the exact time.</p>
+    </div>
+
+    <form id="flow" novalidate>
+      <fieldset>
+        <legend><i>1</i> What are we doing?</legend>
+        <div class="opts" id="svc"></div>
+        <div id="len-wrap" hidden>
+          <p class="hint" style="margin-top:1.4rem">Your hair length</p>
+          <div class="opts lens" id="len"></div>
+        </div>
+        <label class="check" id="first-wrap"><input type="checkbox" id="first"> <span><b>It's my first visit to Elysium.</b> We'll book you the longer new-guest appointment where it matters.</span></label>
+        <label class="check"><input type="checkbox" id="ritual-add"> <span><b>Add a hair &amp; scalp ritual.</b> Over 40 options; your stylist recommends one on the day.</span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend><i>2</i> Who with?</legend>
+        <div class="opts" id="who"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend><i>3</i> When suits?</legend>
+        <div class="opts days" id="day"></div>
+        <p class="hint" style="margin-top:1.4rem">Time of day</p>
+        <div class="opts tod" id="tod"></div>
+      </fieldset>
+    </form>
+
+    <aside class="summary" aria-labelledby="sum-h">
+      <h3 id="sum-h">Your booking</h3>
+      <dl>
+        <dt>Service</dt><dd id="s-svc" class="empty">Choose a service</dd>
+        <dt>Stylist</dt><dd id="s-who">Matched for you</dd>
+        <dt>When</dt><dd id="s-when" class="empty">Any day, Tue–Fri</dd>
+        <dt>Allow</dt><dd id="s-time" class="empty">—</dd>
+      </dl>
+      <div class="price-line"><span id="s-plabel">Starting price</span><strong id="s-price" class="num">—</strong></div>
+      <p class="fine" id="s-fine">Pick a service to see its starting price and deposit.</p>
+      <a class="btn btn-champ" id="go" href="https://phorest.com/book/salons/elysiumhairbrisbane" target="_blank" rel="noopener">Continue to secure booking <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-line" id="sms" href="sms:+61448004235">Text this request instead <svg aria-hidden="true"><use href="#i-chat"/></svg></a>
+      <p class="after">Prefer to talk? Call <a class="num" href="tel:0732290816">07 3229 0816</a></p>
+    </aside>
+  </div>
+</section>
+
+<section class="visit sec mist" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div>
+      <h2 class="h2" id="visit-h">Open late, <em>right in the city.</em></h2>
+      <ul class="hours" id="hours">
+        <li data-d="1" class="closed"><span class="day">Monday</span><span class="tm">Closed</span><span class="tag"></span><span class="bar"></span></li>
+        <li data-d="2" data-o="10:00" data-c="20:00"><span class="day">Tuesday</span><span class="tm num">10:00am – 8:00pm</span><span class="tag"></span><span class="bar"><i></i></span></li>
+        <li data-d="3" data-o="9:30" data-c="20:00"><span class="day">Wednesday</span><span class="tm num">9:30am – 8:00pm</span><span class="tag"></span><span class="bar"><i></i></span></li>
+        <li data-d="4" data-o="11:15" data-c="20:00"><span class="day">Thursday</span><span class="tm num">11:15am – 8:00pm</span><span class="tag"></span><span class="bar"><i></i></span></li>
+        <li data-d="5" data-o="8:30" data-c="18:00"><span class="day">Friday</span><span class="tm num">8:30am – 6:00pm</span><span class="tag"></span><span class="bar"><i></i></span></li>
+        <li data-d="6" class="closed"><span class="day">Saturday</span><span class="tm">Closed</span><span class="tag"></span><span class="bar"></span></li>
+        <li data-d="0" class="closed"><span class="day">Sunday</span><span class="tm">Closed</span><span class="tag"></span><span class="bar"></span></li>
+      </ul>
+      <p class="hours-note">Closed on public holidays. Times shown in Brisbane time.</p>
+      <div class="getting">
+        <p><strong>By Metro, bus or train</strong>M1 Metro to Roma Street. Buses 45, 46, 47, 17, 18 and 19 stop close by. Central, Roma Street and South Brisbane stations are under 15 minutes' walk.</p>
+        <p><strong>By car</strong>Pre-book parking at Uptown (Elizabeth St), Queens Plaza (Edward St) or Wilsons Brisbane Quarter, and aim to arrive at the car park 20 minutes before your appointment.</p>
+        <p><strong>While you're here</strong>Wifi, drinks and snacks (gluten-free and lactose-free options), a cloakroom, disabled access and storage for your bike or scooter.</p>
+        <p><strong>First time?</strong>Arrive with your hair as you usually wear it, ideally two or three days after washing, and tangle free.</p>
+      </div>
+    </div>
+    <div class="where">
+      <address>15 Adelaide Street,<br>Brisbane City QLD 4000</address>
+      <p class="landmarks">Ground floor, next to Subway and above Snap Fitness (not inside the high rise). Nearest cross street George Street, a short walk from City Hall and the W hotel.</p>
+      <div class="contact-row">
+        <a class="btn btn-ink" href="https://g.page/elysiumhairbrisbane?share" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg> Directions</a>
+        <a class="btn btn-line-ink num" href="tel:0732290816"><svg aria-hidden="true"><use href="#i-phone"/></svg> 07 3229 0816</a>
+        <a class="btn btn-line-ink num" href="sms:+61448004235"><svg aria-hidden="true"><use href="#i-chat"/></svg> SMS 0448 004 235</a>
+      </div>
+      <iframe class="map" title="Map of Elysium Hair Brisbane, 15 Adelaide Street, Brisbane City" src="https://maps.google.com/maps?q=Elysium%20Hair%20Brisbane%2C%2015%20Adelaide%20Street%2C%20Brisbane%20City%20QLD%204000&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="hours-note">Or email <a href="mailto:info@elysiumhairbrisbane.com.au">info@elysiumhairbrisbane.com.au</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="close sec dark" aria-labelledby="close-h">
+  <div class="wrap">
+    <h2 id="close-h">Your stylist is <em>one booking away.</em></h2>
+    <p>Book online any time, day or night. Not sure where to start? The consultation is free.</p>
+    <div class="cta-row">
+      <a class="btn btn-champ" href="#book">Book online <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-line" href="https://phorest.com/book/salons/elysiumhairbrisbane/book/consultations/form?lead_source=WEBSITE" target="_blank" rel="noopener">Free consultation</a>
+      <a class="btn btn-line num" href="tel:0732290816"><svg aria-hidden="true"><use href="#i-phone"/></svg> 07 3229 0816</a>
+    </div>
+    <p class="perks"><span>Afterpay &amp; Zip</span><span>Elysium Rewards on every visit</span><a href="https://gift-cards.phorest.com/salons/elysiumhairbrisbane" target="_blank" rel="noopener">Gift vouchers</a></p>
+  </div>
+  <div class="close-strip" aria-hidden="true"><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/68b777bb097b4c045b2943cd2cf77bcc.webp)"></div><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/1b00d783dd910e0b5f7c6e8f53021f9e.webp)"></div><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/257cca614a5e19a0e8b0057847515de5.webp)"></div><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/be1b9fcc800366b753d1dfadcd5020a1.webp)"></div><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/7f9d34fab83d1764cd233d8f18765cb5.webp)"></div><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/24ea4d9f33fbd1196c7bfe7e6ea21219.webp)"></div><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/3f2780156b028e70a372871381c4f41a.webp)"></div><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/82cf136451752fafa496b9d9972954ac.webp)"></div><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/37009483b58a01cc6896c4b64b0be687.webp)"></div><div style="background-image:url(https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/475032dced330141e33f926eb8c746be.webp)"></div></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top" aria-label="Elysium Hair Brisbane, back to top"><svg viewBox="0 0 348.86 132.52" aria-hidden="true"><use href="#elysium"/></svg></a>
+      <p style="margin-top:1.25rem;max-width:22rem">An award-winning, people-first salon at 15 Adelaide Street, Brisbane City. A certified sustainable salon.</p>
+    </div>
+    <div>
+      <h2>Visit</h2>
+      <ul>
+        <li><a href="https://phorest.com/book/salons/elysiumhairbrisbane" target="_blank" rel="noopener">Book online</a></li>
+        <li><a class="num" href="tel:0732290816">Call 07 3229 0816</a></li>
+        <li><a class="num" href="sms:+61448004235">SMS 0448 004 235</a></li>
+        <li><a href="mailto:info@elysiumhairbrisbane.com.au">Email us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>More</h2>
+      <ul>
+        <li><a href="https://gift-cards.phorest.com/salons/elysiumhairbrisbane" target="_blank" rel="noopener">Gift vouchers</a></li>
+        <li><a href="https://shop-us.phorest.com/businesses/qXySTg4ThFN79uamjGEvrg/branches/pn6W1QRLbB-97APlXK0OKw/products" target="_blank" rel="noopener">Shop haircare</a></li>
+        <li><a href="https://elysiumhairbrisbane.com.au/Elysium-Rewards/">Elysium Rewards</a></li>
+        <li><a href="https://elysiumhairbrisbane.com.au/booking-amp-cancellation-policy/">Booking &amp; cancellation policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Follow</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/elysiumhairbrisbane/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/elysiumhairbrisbane" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.tiktok.com/@elysiumhairbrisbane" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.pinterest.com.au/elysiumhairbrisbane" target="_blank" rel="noopener">Pinterest</a></li>
+      </ul>
+    </div>
+    <p class="legal"><span>© Elysium Hair Brisbane. Photos: Elysium Hair Brisbane.</span><span>Concept redesign prepared for Elysium Hair Brisbane. Items marked “placeholder” are to be replaced by the salon.</span></p>
+  </div>
+</footer>
+
+<div class="mbar" role="navigation" aria-label="Quick actions">
+  <a class="btn btn-champ" href="#book">Book online</a>
+  <a class="btn btn-line" href="tel:0732290816"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
+</div>
+
+<script>
+(function(){
+  /* ---------- Brisbane time ---------- */
+  function bne(){
+    var f=new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Brisbane',weekday:'short',hour:'numeric',minute:'numeric',hour12:false});
+    var p={};f.formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
+    var days={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    return {d:days[p.weekday],m:(+p.hour%24)*60+(+p.minute)};
+  }
+  var HOURS={2:[600,1200],3:[570,1200],4:[675,1200],5:[510,1080]};
+  var NAMES=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'pm':'am';h=h%12||12;return h+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+  function nextOpen(d,m){for(var i=0;i<8;i++){var dd=(d+i)%7,h=HOURS[dd];if(h&&(i>0||m<h[0]))return{d:dd,i:i,o:h[0]}}}
+  var now=bne(), today=HOURS[now.d], open=today&&now.m>=today[0]&&now.m<today[1];
+  var st=document.getElementById('status'), sm=document.getElementById('status-main'), ss=document.getElementById('status-sub');
+  if(open){st.classList.add('is-open');sm.textContent='Open now';ss.textContent='· until '+fmt(today[1])+' today';}
+  else{var n=nextOpen(now.d,now.m);sm.textContent='Closed now';ss.textContent='· opens '+(n.i===0?'today':n.i===1?'tomorrow':NAMES[n.d])+' at '+fmt(n.o);}
+  document.querySelectorAll('#hours li').forEach(function(li){
+    if(+li.dataset.d!==now.d)return;
+    li.classList.add('today');
+    var tag=li.querySelector('.tag');tag.textContent=open?'Open now':'Today';
+    if(today){var b=li.querySelector('.bar i');if(b){var pct=Math.max(0,Math.min(1,(now.m-today[0])/(today[1]-today[0])));b.style.left=(pct*100)+'%';if(!open)b.style.opacity=.35;}}
+  });
+
+  /* ---------- header shadow ---------- */
+  var top=document.getElementById('top');
+  addEventListener('scroll',function(){top.classList.toggle('scrolled',scrollY>8)},{passive:true});
+
+  /* ---------- menu length toggle ---------- */
+  var PRICES={balayage:{s:155,m:187,l:198,x:214},foils:{s:180,m:221,l:207,x:238}};
+  var LEN={s:'Short: jaw line or above.',m:'Medium: below the jaw, above the shoulders.',l:'Long: below the shoulders, above mid-back.',x:'Extra long or thick hair.'};
+  document.querySelectorAll('.seg button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.seg button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+      var l=b.dataset.len;document.getElementById('len-desc').textContent=LEN[l];
+      document.querySelectorAll('[data-price]').forEach(function(el){el.textContent='$'+PRICES[el.dataset.price][l];var p=el.closest('.p');p.classList.remove('changed');void p.offsetWidth;p.classList.add('changed')});
+    });
+  });
+
+  /* ---------- booking flow ---------- */
+  var SVC=[
+    {id:'balayage',n:'Balayage',sub:'Our speciality',len:true,from:PRICES.balayage,dep:150,t:'3–5 hours (lightening)'},
+    {id:'foils',n:'Foils',sub:'Classic, baby lights, micro',len:true,from:PRICES.foils,dep:150,t:'3–5 hours (lightening)'},
+    {id:'colour',n:'Colour',sub:'Permanent or semi',len:true,from:108,dep:150,t:'About 3 hours'},
+    {id:'cut',n:'Haircut',sub:'Cut & finish',len:true,from:null,dep:100,t:'About 1.5 hours'},
+    {id:'curly',n:'Curl by curl cut',sub:'Dry cut & hydration',from:null,dep:100,t:'About 3 hours'},
+    {id:'blowdry',n:'Blow-dry',sub:'With shiatsu lounge',from:74,dep:50,t:'About 1.25 hours'},
+    {id:'stylebar',n:'Style Bar',sub:'Express, on dry hair',from:45,dep:20,t:'25–45 minutes'},
+    {id:'keratin',n:'Keratin smoothing',sub:'Guava Latino',from:348,dep:150,t:'About 3.5 hours'},
+    {id:'event',n:'Event styling',sub:'Book by call or text',from:null,dep:null,t:'Your stylist will advise'},
+    {id:'consult',n:'Free consultation',sub:'Not sure yet? Start here',from:0,dep:null,t:'About 30 minutes'}
+  ];
+  var LENS=[['s','Short','Jaw or above'],['m','Medium','To the shoulders'],['l','Long','To mid-back'],['x','Extra long','Or very thick']];
+  var WHO=[['match','Match me','Recommended for first visits'],['Carla','Carla','Master Stylist & Colour Specialist'],['Christina','Christina','Senior Stylist'],['Maddie','Maddie','Advanced Stylist'],['Yumi','Yumi','Advanced Stylist'],['Shayla','Shayla','Advanced Stylist']];
+  var DAYS=[['2','Tuesday','10am – 8pm'],['3','Wednesday','9:30am – 8pm'],['4','Thursday','11:15am – 8pm'],['5','Friday','8:30am – 6pm']];
+  var TOD=[['morning','Morning','Before 12pm'],['afternoon','Afternoon','12pm – 5pm'],['evening','After work','5pm – 8pm, Tue–Thu']];
+  var S={svc:null,len:'s',who:'match',day:null,tod:null};
+  function opts(el,name,list,checked){
+    el.innerHTML=list.map(function(o,i){var id=name+'-'+o[0];return '<div class="opt"><input type="radio" name="'+name+'" id="'+id+'" value="'+o[0]+'"'+(o[0]===checked?' checked':'')+'><label for="'+id+'"><b>'+o[1]+'</b><small>'+o[2]+'</small></label></div>'}).join('');
+  }
+  opts(document.getElementById('svc'),'svc',SVC.map(function(s){return[s.id,s.n,s.sub]}),null);
+  opts(document.getElementById('len'),'len',LENS,'s');
+  opts(document.getElementById('who'),'who',WHO,'match');
+  opts(document.getElementById('day'),'day',DAYS,null);
+  opts(document.getElementById('tod'),'tod',TOD,null);
+  var flow=document.getElementById('flow');
+  flow.addEventListener('change',function(e){
+    var t=e.target;
+    if(t.name){S[t.name]=t.value}
+    if(t.name==='day'){var ev=document.getElementById('tod-evening');ev.disabled=(t.value==='5');if(t.value==='5'&&S.tod==='evening'){ev.checked=false;S.tod=null}}
+    render();
+  });
+  function svc(){return SVC.filter(function(s){return s.id===S.svc})[0]}
+  function price(s,first){
+    if(!s)return null;
+    if(s.id==='cut'){return first?229:(S.len==='s'?112:167)}
+    if(s.id==='curly'){return first?330:221}
+    if(typeof s.from==='object'&&s.from)return s.from[S.len];
+    return s.from;
+  }
+  function render(){
+    var s=svc(),first=document.getElementById('first').checked,rit=document.getElementById('ritual-add').checked;
+    document.getElementById('len-wrap').hidden=!(s&&s.len);
+    var lenName=LENS.filter(function(l){return l[0]===S.len})[0][1].toLowerCase();
+    var name=s?s.n+(s.len?', '+lenName+' hair':'')+(s.id==='cut'&&first?' (new guest, 90 min)':'')+(rit?' + ritual':''):null;
+    var w=WHO.filter(function(x){return x[0]===S.who})[0];
+    var dayN=S.day?NAMES[+S.day]:null, todN=S.tod?TOD.filter(function(x){return x[0]===S.tod})[0][1].toLowerCase():null;
+    var when=dayN?(dayN+(todN?', '+todN:'')):(todN?'Any day, '+todN:null);
+    set('s-svc',name,'Choose a service');
+    set('s-who',S.who==='match'?'Matched for you':w[1]+', '+w[2],null);
+    set('s-when',when,'Any day, Tue–Fri');
+    set('s-time',s?s.t:null,'—');
+    var p=price(s,first),pe=document.getElementById('s-price'),pl=document.getElementById('s-plabel'),fine=document.getElementById('s-fine'),go=document.getElementById('go');
+    var url='https://phorest.com/book/salons/elysiumhairbrisbane';
+    if(!s){pe.textContent='—';fine.textContent='Pick a service to see its starting price and deposit.';}
+    else if(s.id==='consult'){pe.textContent='Free';pl.textContent='Consultation';fine.textContent='Tell us your hair type, condition and history, and we\'ll build a hair plan and match you with a stylist.';url='https://phorest.com/book/salons/elysiumhairbrisbane/book/consultations/form?lead_source=WEBSITE';}
+    else if(s.id==='event'){pe.textContent='Ask us';pl.textContent='Starting price';fine.textContent='Event styling is arranged with a quick conversation so we can confirm your date. Tuesday to Friday; no weddings or on-location.';}
+    else{pe.textContent='$'+p;pl.textContent='Starting price';fine.textContent='A $'+s.dep+' deposit secures it and comes off your bill. Changes within 48 hours forfeit the deposit. Final quote at consultation'+(rit?'; ritual priced on the day':'')+'.';}
+    var ev=s&&s.id==='event';
+    go.href=url;
+    go.firstChild.nodeValue=ev?'Text us to book ':(s&&s.id==='consult'?'Start free consultation ':'Continue to secure booking ');
+    if(ev){go.href=smsHref()}
+    go.target=ev?'_self':'_blank';
+    document.getElementById('sms').href=smsHref();
+    function smsHref(){
+      var msg='Hi Elysium, I\'d like to book'+(name?': '+name:' an appointment')+(S.who!=='match'?' with '+w[1]:'')+(when?', '+when:'')+'.'+(first?' It\'s my first visit.':'')+' My name is ';
+      return 'sms:+61448004235?&body='+encodeURIComponent(msg);
+    }
+  }
+  document.getElementById('first-wrap').addEventListener('change',render);
+  /* deep links from menu */
+  document.querySelectorAll('[data-pick]').forEach(function(a){
+    a.addEventListener('click',function(){var r=document.getElementById('svc-'+a.dataset.pick);if(r){r.checked=true;S.svc=r.value;render()}});
+  });
+  render();
+})();
+</script>
+</body>
+</html>
