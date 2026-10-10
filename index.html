@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Elysium Hair Brisbane · Award-winning colour, cuts &amp; blow-dries</title>
 <meta name="description" content="Seven-time Australian Salon of the Year on Adelaide Street, Brisbane City. Balayage, blondes, bespoke colour, curl by curl cuts and blow-dries, with a stylist matched to you. Book online.">
-<meta name="theme-color" content="#F2F2F0">
+<meta name="theme-color" content="#171513">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://elysiumhairbrisbane.com.au">
@@ -65,43 +65,45 @@ p{margin:0;text-wrap:pretty}
 .link svg{width:.85rem;height:.85rem}
 
 /* header */
-.top{position:sticky;top:0;z-index:40;background:var(--paper);transition:box-shadow .4s var(--ease)}
-.top.scrolled{box-shadow:0 1px 0 var(--line)}
+.top{position:sticky;top:0;z-index:40;background:var(--ink);color:var(--paper);transition:box-shadow .4s var(--ease)}
+.top.scrolled{box-shadow:0 1px 0 rgba(242,242,240,.1)}
 .top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:5rem;gap:2rem}
-.logo{display:block;color:var(--ink);width:8.75rem}
+.logo{display:block;color:var(--paper);width:8.75rem}
 .logo svg{display:block;width:100%;height:auto}
 .nav{display:flex;gap:2.25rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
-.nav a{text-decoration:none;color:var(--ink);position:relative}
-.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-.4rem;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav a{text-decoration:none;color:var(--paper);position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-.4rem;height:1px;background:var(--paper);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
 .nav a:hover::after{transform:scaleX(1)}
 .top-r{display:flex;align-items:center;justify-content:flex-end;gap:1.5rem}
 .top-call{font-size:.95rem;text-decoration:none;white-space:nowrap}
 .top .btn{--h:2.75rem;padding:0 1.35rem}
 
 /* hero */
-.hero{padding-top:clamp(2rem,5vw,4.25rem)}
-.hero h1{font-size:clamp(2.55rem,7.4vw,6rem);font-weight:300;line-height:1.02;letter-spacing:-.035em}
-.hero h1 .ln{display:flex;align-items:center;flex-wrap:wrap;column-gap:.22em}
+.hero{background:var(--ink);color:var(--paper);padding-top:clamp(2rem,4.5vw,4rem)}
+.hero h1{font-size:clamp(2.6rem,8.6vw,8.25rem);font-weight:300;line-height:.98;letter-spacing:-.045em}
+.hero h1 .ln{display:flex;align-items:center;flex-wrap:wrap;column-gap:.2em}
 .hero h1 .ln + .ln{justify-content:flex-end}
-.inl{display:inline-block;height:.78em;width:2.2em;overflow:hidden;flex:none;position:relative;top:.02em;background:var(--bone)}
-.inl img{width:100%;height:100%;object-fit:cover}
+.inl{display:inline-block;height:.8em;width:2.6em;overflow:hidden;flex:none;position:relative;top:.03em;background:#2B2724}
+.inl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.inl img + img{opacity:0}
+.inl.cycling img{opacity:0;transform:scale(1.08);transition:opacity 1.1s var(--ease),transform 3s var(--ease)}
+.inl.cycling img.on{opacity:1;transform:scale(1)}
 @media (prefers-reduced-motion:no-preference){
-  .inl{animation:open 1.6s var(--ease) .25s both}
-  .ln + .ln .inl{animation-delay:.45s}
-  .inl img{animation:zoom 2.2s var(--ease) .25s both}
+  .inl{animation:open 1.6s var(--ease) .2s both}
+  .ln + .ln .inl{animation-delay:.4s}
 }
-@keyframes open{from{width:1.2em}to{width:2.2em}}
-@keyframes zoom{from{transform:scale(1.25)}to{transform:scale(1)}}
+@keyframes open{from{width:1.4em}to{width:2.6em}}
 .hero-foot{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:2rem 4rem;align-items:start;margin-top:clamp(2rem,4vw,3.25rem);padding-bottom:clamp(2rem,4vw,3rem)}
-.lede{font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.6;max-width:36rem;color:var(--ink)}
-.lede span{color:var(--mute)}
+.lede{font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.6;max-width:36rem;color:var(--paper)}
+.lede span{color:var(--mute-d)}
+.hero-note{margin-top:.9rem;font-size:.85rem;color:var(--mute-d)}
 .hero-act{display:flex;flex-direction:column;align-items:flex-end;gap:1.1rem}
 .cta-row{display:flex;flex-wrap:wrap;gap:.75rem}
-.status{font-size:.92rem;color:var(--mute);text-align:right}
-.status b{font-weight:500;color:var(--ink)}
-.dot{display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--stone);margin-right:.5rem;vertical-align:.08em}
-.is-open .dot{background:#4F7A4A;box-shadow:0 0 0 4px rgba(79,122,74,.15)}
-.ribbon{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:100%;gap:6px;height:clamp(17rem,34vw,32rem);overflow:hidden}
+.status{font-size:.92rem;color:var(--mute-d);text-align:right}
+.status b{font-weight:500;color:var(--paper)}
+.dot{display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:#6B655E;margin-right:.5rem;vertical-align:.08em}
+.is-open .dot{background:#8FC28A;box-shadow:0 0 0 4px rgba(143,194,138,.18)}
+.ribbon{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:100%;gap:6px;background:var(--ink);height:clamp(17rem,34vw,32rem);overflow:hidden}
 .ribbon img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:50% 30%;background:var(--bone)}
 
 /* section scaffolding */
@@ -234,7 +236,10 @@ legend i{font-style:normal;font-size:.8rem;letter-spacing:.12em;color:var(--mute
 .check input:checked{background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.5L12 5.3' fill='none' stroke='%23F2F2F0' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/85% no-repeat;border-color:var(--ink)}
 .check b{color:var(--ink);font-weight:500}
 .summary{position:sticky;top:6.5rem;background:var(--graphite);color:var(--paper);padding:clamp(1.5rem,2.5vw,2.25rem);border-radius:6px;box-shadow:0 30px 60px -35px rgba(23,21,19,.6)}
-.summary h3{font-size:1.65rem;margin-bottom:1.25rem}
+.sum-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1.25rem}
+.summary h3{font-size:1.65rem}
+.clear{font:500 .76rem/1 var(--font);letter-spacing:.12em;text-transform:uppercase;color:var(--mute-d);background:none;border:0;border-bottom:1px solid currentColor;padding:.2rem 0;cursor:pointer}
+.clear:hover{color:var(--paper)}
 .summary dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.7rem 1.25rem;font-size:.95rem;padding-bottom:1.25rem;border-bottom:1px solid var(--line-d)}
 .summary dt{color:var(--mute-d)}
 .summary dd{margin:0;text-align:right;font-weight:500}
@@ -320,7 +325,8 @@ footer a:hover{color:var(--paper);text-decoration:underline}
   .top .wrap{height:4.25rem}
   .logo{width:7.5rem}
   .top .btn,.top-call{display:none}
-  .hero h1 .ln + .ln{justify-content:flex-start}
+  .hero h1{font-size:12.4vw;line-height:1.02}
+  .hero h1 .ln + .ln{justify-content:flex-start;margin-top:.12em}
   .ribbon{grid-template-columns:repeat(2,minmax(0,1fr));height:18rem}
   .ribbon img:nth-child(n+3){display:none}
   .team ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1.25rem}
@@ -362,7 +368,7 @@ footer a:hover{color:var(--paper);text-decoration:underline}
     </nav>
     <div class="top-r">
       <a class="top-call num" href="tel:0732290816">07 3229 0816</a>
-      <a class="btn btn-ink" href="#book">Book online</a>
+      <a class="btn btn-paper" href="#book">Book online</a>
     </div>
   </div>
 </header>
@@ -371,15 +377,18 @@ footer a:hover{color:var(--paper);text-decoration:underline}
 <section class="hero" aria-labelledby="h1">
   <div class="wrap">
     <h1 id="h1">
-      <span class="ln">Love your <span class="inl"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/68b777bb097b4c045b2943cd2cf77bcc.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/68b777bb097b4c045b2943cd2cf77bcc.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/68b777bb097b4c045b2943cd2cf77bcc.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/68b777bb097b4c045b2943cd2cf77bcc.webp 800w" sizes="12rem" alt="" style="object-position:60% 58%" decoding="async"></span> look.</span>
-      <span class="ln">Love your <span class="inl"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/e02fcfd2949b8303918d7a3cbe3bb52c.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/e02fcfd2949b8303918d7a3cbe3bb52c.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/e02fcfd2949b8303918d7a3cbe3bb52c.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/e02fcfd2949b8303918d7a3cbe3bb52c.webp 800w" sizes="12rem" alt="" style="object-position:33% 26%" decoding="async"></span> stylist.</span>
+      <span class="ln">Love your <span class="inl" data-cycle><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/68b777bb097b4c045b2943cd2cf77bcc.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/68b777bb097b4c045b2943cd2cf77bcc.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/68b777bb097b4c045b2943cd2cf77bcc.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/68b777bb097b4c045b2943cd2cf77bcc.webp 800w" sizes="12rem" alt="" style="object-position:60% 58%" decoding="async"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/be1b9fcc800366b753d1dfadcd5020a1.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/be1b9fcc800366b753d1dfadcd5020a1.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/be1b9fcc800366b753d1dfadcd5020a1.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/be1b9fcc800366b753d1dfadcd5020a1.webp 800w" sizes="12rem" alt="" style="object-position:50% 50%" decoding="async"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/475032dced330141e33f926eb8c746be.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/475032dced330141e33f926eb8c746be.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/475032dced330141e33f926eb8c746be.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/475032dced330141e33f926eb8c746be.webp 800w" sizes="12rem" alt="" style="object-position:50% 55%" decoding="async"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/2bcb8b25f4ef404c5608a73bc0f3ff58.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/2bcb8b25f4ef404c5608a73bc0f3ff58.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/2bcb8b25f4ef404c5608a73bc0f3ff58.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/2bcb8b25f4ef404c5608a73bc0f3ff58.webp 800w" sizes="12rem" alt="" style="object-position:50% 38%" decoding="async"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/257cca614a5e19a0e8b0057847515de5.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/257cca614a5e19a0e8b0057847515de5.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/257cca614a5e19a0e8b0057847515de5.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/257cca614a5e19a0e8b0057847515de5.webp 800w" sizes="12rem" alt="" style="object-position:20% 62%" decoding="async"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/82cf136451752fafa496b9d9972954ac.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/82cf136451752fafa496b9d9972954ac.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/82cf136451752fafa496b9d9972954ac.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/82cf136451752fafa496b9d9972954ac.webp 800w" sizes="12rem" alt="" style="object-position:50% 58%" decoding="async"></span> look.</span>
+      <span class="ln">Love your <span class="inl" data-cycle><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/e02fcfd2949b8303918d7a3cbe3bb52c.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/e02fcfd2949b8303918d7a3cbe3bb52c.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/e02fcfd2949b8303918d7a3cbe3bb52c.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/e02fcfd2949b8303918d7a3cbe3bb52c.webp 800w" sizes="12rem" alt="" style="object-position:33% 26%" decoding="async"><img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/6962fb3add6ca3575b39b302b6b47ce2.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/6962fb3add6ca3575b39b302b6b47ce2.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/6962fb3add6ca3575b39b302b6b47ce2.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/6962fb3add6ca3575b39b302b6b47ce2.webp 800w" sizes="12rem" alt="" style="object-position:28% 30%" decoding="async"></span> stylist.</span>
     </h1>
     <div class="hero-foot">
-      <p class="lede">Seven-time Australian Salon of the Year, on Adelaide Street in Brisbane City. <span>Beautiful blondes, bespoke colour and cuts that grow out well, with the hairdresser best suited to you.</span></p>
+      <div>
+        <p class="lede">Seven-time Australian Salon of the Year, on Adelaide Street in Brisbane City. <span>Beautiful blondes, bespoke colour and cuts that grow out well, with the hairdresser best suited to you.</span></p>
+        <p class="hero-note">Every photo on this page is real work and real people from our Adelaide Street salon.</p>
+      </div>
       <div class="hero-act">
         <div class="cta-row">
-          <a class="btn btn-ink" href="#book">Book online <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-line" href="https://phorest.com/book/salons/elysiumhairbrisbane/book/consultations/form?lead_source=WEBSITE" target="_blank" rel="noopener">Free consultation</a>
+          <a class="btn btn-paper" href="#book">Book online <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-line-d" href="https://phorest.com/book/salons/elysiumhairbrisbane/book/consultations/form?lead_source=WEBSITE" target="_blank" rel="noopener">Free consultation</a>
         </div>
         <p class="status" id="status"><span class="dot" aria-hidden="true"></span><b id="status-main">Open Tuesday to Friday</b> <span id="status-sub"></span><br>Open till 8pm Tue–Thu · 15 Adelaide St</p>
       </div>
@@ -589,7 +598,7 @@ footer a:hover{color:var(--paper);text-decoration:underline}
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h2" id="book-h">Book your appointment</h2>
-      <p class="intro">Tell us what you'd like, who with and when suits. We'll show your starting price and deposit, then take you to our secure booking to choose the exact time.</p>
+      <p class="intro">Tell us what you'd like, who with and when suits. We'll show your starting price and deposit, then take you to our secure booking to choose the exact time. Tap a choice again to clear it.</p>
     </div>
 
     <form id="flow" novalidate>
@@ -616,7 +625,7 @@ footer a:hover{color:var(--paper);text-decoration:underline}
     </form>
 
     <aside class="summary" aria-labelledby="sum-h">
-      <h3 id="sum-h">Your booking</h3>
+      <div class="sum-head"><h3 id="sum-h">Your booking</h3><button type="button" class="clear" id="clear">Clear all</button></div>
       <dl>
         <dt>Service</dt><dd id="s-svc" class="empty">Choose a service</dd>
         <dt>Stylist</dt><dd id="s-who">Matched for you</dd>
@@ -746,6 +755,16 @@ footer a:hover{color:var(--paper);text-decoration:underline}
     if(today&&b){b.style.left=(Math.max(0,Math.min(1,(now.m-today[0])/(today[1]-today[0])))*100)+'%';if(!open)b.style.opacity=.35;}
   });
 
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('[data-cycle]').forEach(function(box,k){
+      var imgs=box.querySelectorAll('img');if(imgs.length<2)return;
+      var i=0;box.classList.add('cycling');imgs[0].classList.add('on');
+      setTimeout(function(){setInterval(function(){
+        if(document.hidden)return;
+        imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on');
+      },2600)},1600+k*1300);
+    });
+  }
   var top=document.getElementById('top');
   addEventListener('scroll',function(){top.classList.toggle('scrolled',scrollY>8)},{passive:true});
 
@@ -799,20 +818,29 @@ footer a:hover{color:var(--paper);text-decoration:underline}
     if(t.name==='day'){var ev=document.getElementById('tod-evening');ev.disabled=(t.value==='5');if(t.value==='5'&&S.tod==='evening'){ev.checked=false;S.tod=null}}
     render();
   });
+  var flowEl=document.getElementById('flow'),armed=null;
+  function clearField(n){S[n]=n==='who'?'match':null;render()}
+  flowEl.addEventListener('pointerdown',function(e){var o=e.target.closest('.opt'),t=o&&o.querySelector('input');armed=(t&&t.checked)?t:null});
+  flowEl.addEventListener('click',function(e){var t=e.target;if(t.type!=='radio')return;if(armed===t){t.checked=false;clearField(t.name)}armed=null});
+  flowEl.addEventListener('keydown',function(e){var t=e.target;if(t.type==='radio'&&t.checked&&(e.key===' '||e.key==='Enter')){e.preventDefault();t.checked=false;clearField(t.name)}});
+  document.getElementById('clear').addEventListener('click',function(){
+    flowEl.querySelectorAll('input').forEach(function(i){i.checked=(i.id==='who-match'||i.id==='len-s');i.disabled=false});
+    S={svc:null,len:'s',who:'match',day:null,tod:null};render();
+  });
   function set(id,val,fb){var el=document.getElementById(id);el.textContent=val||fb;el.classList.toggle('empty',!val)}
   function svc(){return SVC.filter(function(s){return s.id===S.svc})[0]}
   function price(s,first){
     if(!s)return null;
-    if(s.id==='cut')return first?229:(S.len==='s'?112:167);
+    if(s.id==='cut')return first?229:((S.len||'s')==='s'?112:167);
     if(s.id==='curly')return first?330:221;
-    if(s.from&&typeof s.from==='object')return s.from[S.len];
+    if(s.from&&typeof s.from==='object')return s.from[S.len||'s'];
     return s.from;
   }
   function render(){
     var s=svc(),first=document.getElementById('first').checked,rit=document.getElementById('ritual-add').checked;
     document.getElementById('len-wrap').hidden=!(s&&s.len);
-    var lenName=LENS.filter(function(l){return l[0]===S.len})[0][1].toLowerCase();
-    var name=s?s.n+(s.len?', '+lenName+' hair':'')+(s.id==='cut'&&first?' (new guest, 90 min)':'')+(rit?' + ritual':''):null;
+    var lenRow=LENS.filter(function(l){return l[0]===S.len})[0],lenName=lenRow?lenRow[1].toLowerCase():null;
+    var name=s?s.n+(s.len&&lenName?', '+lenName+' hair':'')+(s.id==='cut'&&first?' (new guest, 90 min)':'')+(rit?' + ritual':''):null;
     var w=WHO.filter(function(x){return x[0]===S.who})[0];
     var dayN=S.day?NAMES[+S.day]:null,todN=S.tod?TOD.filter(function(x){return x[0]===S.tod})[0][1].toLowerCase():null;
     var when=dayN?dayN+(todN?', '+todN:''):(todN?'Any day, '+todN:null);
