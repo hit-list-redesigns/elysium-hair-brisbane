@@ -760,6 +760,7 @@ footer a:hover{color:var(--champ);text-decoration:underline}
     if(t.name==='day'){var ev=document.getElementById('tod-evening');ev.disabled=(t.value==='5');if(t.value==='5'&&S.tod==='evening'){ev.checked=false;S.tod=null}}
     render();
   });
+  function set(id,val,fallback){var el=document.getElementById(id);el.textContent=val||fallback;el.classList.toggle('empty',!val)}
   function svc(){return SVC.filter(function(s){return s.id===S.svc})[0]}
   function price(s,first){
     if(!s)return null;
