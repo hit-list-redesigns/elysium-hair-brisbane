@@ -295,9 +295,26 @@ footer a:hover{color:var(--paper);text-decoration:underline}
 .legal{grid-column:1 / -1;border-top:1px solid var(--line-d);padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:.84rem}
 
 .mbar{display:none}
+.menu-btn{display:none;align-items:center;gap:.6rem;background:none;border:0;color:var(--paper);font:500 .8rem/1 var(--font);letter-spacing:.14em;text-transform:uppercase;padding:.6rem 0 .6rem .5rem;cursor:pointer}
+.menu-btn svg{width:1.5rem;height:1.5rem;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}
+.menu-btn path{transition:transform .35s var(--ease);transform-origin:12px 12px}
+.menu-btn[aria-expanded="true"] .l1{transform:translateY(3px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] .l2{transform:translateY(-3px) rotate(-45deg)}
+.mnav{position:fixed;left:0;right:0;bottom:0;top:5rem;z-index:45;background:var(--ink);color:var(--paper);overflow-y:auto;overscroll-behavior:contain}
+.mnav[hidden]{display:none}
+.mnav nav{display:flex;flex-direction:column;padding-top:1rem;padding-bottom:2rem}
+.mnav nav > a{font-size:clamp(1.75rem,7vw,2.4rem);font-weight:300;letter-spacing:-.02em;text-decoration:none;padding:.85rem 0;border-bottom:1px solid var(--line-d)}
+.mnav-foot{display:grid;gap:.6rem;margin-top:2rem}
+.mnav-foot p{color:var(--mute-d);font-size:.92rem;margin-top:.5rem}
+@media (prefers-reduced-motion:no-preference){.mnav:not([hidden]){animation:menu .45s var(--ease)}}
+@keyframes menu{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.quick{display:none}
+.more > summary{list-style:none}
+.more > summary::-webkit-details-marker{display:none}
 
 @media (max-width:1100px){
   .nav{display:none}
+  .menu-btn{display:inline-flex}
   .top .wrap{grid-template-columns:auto 1fr}
 }
 @media (max-width:960px){
@@ -329,21 +346,64 @@ footer a:hover{color:var(--paper);text-decoration:underline}
   .hero h1 .ln + .ln{justify-content:flex-start;margin-top:.12em}
   .ribbon{grid-template-columns:repeat(2,minmax(0,1fr));height:18rem}
   .ribbon img:nth-child(n+3){display:none}
-  .team ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1.25rem}
   .tabs{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(var(--gutter) * -1);padding:0 var(--gutter) .25rem;scrollbar-width:none}
   .tabs::-webkit-scrollbar{display:none}
   .tab{flex:none}
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .opts.days,.opts.lens{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .opts.tod{grid-template-columns:minmax(0,1fr)}
   .getting{grid-template-columns:minmax(0,1fr)}
   .q-text{grid-template-columns:minmax(0,1fr)}
-  .team ul{grid-template-columns:minmax(0,1fr)}
   .hours li{grid-template-columns:6rem minmax(0,1fr) auto;padding:.95rem .7rem}
   footer .wrap{grid-template-columns:minmax(0,1fr)}
   .mbar{display:grid;grid-template-columns:1.6fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:var(--paper);border-top:1px solid var(--line)}
   .mbar .btn{--h:3.1rem;padding:0 1rem}
+  .mbar.in-book{grid-template-columns:1fr}
+  .mbar.in-book #mcall{display:none}
+  .mbar .btn.muted{background:var(--stone);color:var(--ink)}
+  .mnav{top:4.25rem}
+  .menu-btn{padding-right:0}
+  /* hero: less copy, buttons side by side */
+  .hero .lede span,.hero-note{display:none}
+  .hero-foot{gap:1.25rem;margin-top:1.5rem;padding-bottom:1.75rem}
+  .hero .cta-row,.about .cta-row,.close .cta-row{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .hero .cta-row .btn,.about .cta-row .btn,.close .cta-row .btn{padding:0 .7rem;font-size:.72rem;letter-spacing:.1em}
+  .hero-act{width:100%}
+  .status{font-size:.85rem}
+  .ribbon{height:15rem}
+  /* quick menu */
+  .quick{display:block;padding:2.25rem 0 2.5rem;background:var(--paper)}
+  .quick h2{font-size:1.6rem;font-weight:300;letter-spacing:-.02em;margin-bottom:1rem}
+  .quick-list{border-top:1px solid var(--ink)}
+  .quick-list a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.1rem 1rem;padding:1rem 0;border-bottom:1px solid var(--line);text-decoration:none}
+  .quick-list b{font-weight:500;font-size:1.15rem}
+  .quick-list span{grid-column:1;font-size:.86rem;color:var(--mute)}
+  .quick-list em{grid-column:2;grid-row:1 / span 2;font-style:normal;font-size:1rem;font-variant-numeric:lining-nums}
+  .quick-book{width:100%;margin-top:1.25rem}
+  /* trim long copy */
+  .about-copy p:not(.big){display:none}
+  .about.sec{padding-top:3.5rem}
+  .sec{padding:3.75rem 0}
+  .sec-head{margin-bottom:1.75rem}
+  .intro{font-size:1rem}
+  .more{border-top:1px solid var(--line);margin-top:2rem}
+  .more > summary{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;font-weight:500;cursor:pointer}
+  .more > summary::after{content:"+";font-size:1.4rem;font-weight:300;line-height:1}
+  .more[open] > summary::after{content:"–"}
+  .more .small-print,.more .getting{margin-top:0;padding-top:0;border-top:0}
+  /* team two-up */
+  .team ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1.25rem}
+  .team li b{font-size:1.3rem}
+  .team li a{font-size:.72rem;letter-spacing:.08em}
+  /* compact booking */
+  .opts,.opts.days,.opts.lens{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .opts.tod{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .opt label{min-height:3.6rem;padding:.65rem .8rem}
+  .opt label::after{display:none}
+  .opt label b{font-size:.92rem}
+  .opt label small{font-size:.76rem}
+  fieldset{margin-bottom:2rem}
+  .check{font-size:.9rem}
 }
+@media (min-width:761px){.more > summary{display:none}}
 </style>
 </head>
 <body>
@@ -369,9 +429,26 @@ footer a:hover{color:var(--paper);text-decoration:underline}
     <div class="top-r">
       <a class="top-call num" href="tel:0732290816">07 3229 0816</a>
       <a class="btn btn-paper" href="#book">Book online</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav"><span>Menu</span><svg viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M3 9h18"/><path class="l2" d="M3 15h18"/></svg></button>
     </div>
   </div>
 </header>
+
+<div class="mnav" id="mnav" hidden>
+  <nav class="wrap" aria-label="Menu">
+    <a href="#services">Services &amp; prices</a>
+    <a href="#book">Book an appointment</a>
+    <a href="#about">Our team</a>
+    <a href="#ritual">The blow-dry</a>
+    <a href="#work">Our work</a>
+    <a href="#visit">Hours &amp; location</a>
+    <div class="mnav-foot">
+      <a class="btn btn-paper" href="tel:0732290816"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call 07 3229 0816</a>
+      <a class="btn btn-line-d" href="sms:+61448004235"><svg aria-hidden="true"><use href="#i-chat"/></svg> Text 0448 004 235</a>
+      <p>15 Adelaide Street, Brisbane City · <span id="mnav-today">Open Tue–Fri</span></p>
+    </div>
+  </nav>
+</div>
 
 <main id="main">
 <section class="hero" aria-labelledby="h1">
@@ -400,6 +477,19 @@ footer a:hover{color:var(--paper);text-decoration:underline}
     <img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/2bcb8b25f4ef404c5608a73bc0f3ff58.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/2bcb8b25f4ef404c5608a73bc0f3ff58.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/2bcb8b25f4ef404c5608a73bc0f3ff58.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/2bcb8b25f4ef404c5608a73bc0f3ff58.webp 800w" sizes="(max-width:760px) 50vw, (max-width:960px) 33vw, 22vw" alt="Defined natural curls, finished at Elysium." style="object-position:50% 30%" decoding="async">
     <img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/ae5e2f4fc9ece70c013f7652a9e509cc.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/ae5e2f4fc9ece70c013f7652a9e509cc.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/ae5e2f4fc9ece70c013f7652a9e509cc.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/ae5e2f4fc9ece70c013f7652a9e509cc.webp 800w" sizes="(max-width:760px) 50vw, (max-width:960px) 33vw, 22vw" alt="Layered copper with lighter ends, finished at Elysium." style="object-position:50% 30%" decoding="async">
     <img src="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/1b00d783dd910e0b5f7c6e8f53021f9e.webp" srcset="https://elysiumhairbrisbane.com.au/ws/alt-imgs/w400/1b00d783dd910e0b5f7c6e8f53021f9e.webp 400w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w600/1b00d783dd910e0b5f7c6e8f53021f9e.webp 600w, https://elysiumhairbrisbane.com.au/ws/alt-imgs/w800/1b00d783dd910e0b5f7c6e8f53021f9e.webp 800w" sizes="(max-width:760px) 50vw, (max-width:960px) 33vw, 22vw" alt="Sleek golden blonde, finished at Elysium." style="object-position:30% 30%" decoding="async">
+  </div>
+</section>
+
+<section class="quick" aria-labelledby="quick-h">
+  <div class="wrap">
+    <h2 id="quick-h">What are you booking?</h2>
+    <div class="quick-list">
+      <a href="#services" data-tab="t-colour"><b>Colour</b><span>Balayage, foils, colour</span><em>from $108</em></a>
+      <a href="#services" data-tab="t-cuts"><b>Cuts</b><span>New guests &amp; regular trims</span><em>from $65</em></a>
+      <a href="#services" data-tab="t-curls"><b>Curls</b><span>Curl by curl &amp; hydration</span><em>from $65</em></a>
+      <a href="#services" data-tab="t-styling"><b>Blow-dry &amp; styling</b><span>Blow-dry, Style Bar, keratin</span><em>from $45</em></a>
+    </div>
+    <a class="btn btn-ink quick-book" href="#book">Book an appointment <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
@@ -512,11 +602,13 @@ footer a:hover{color:var(--paper);text-decoration:underline}
       </div>
     </div>
 
+    <details class="more" open><summary>Deposits, payment &amp; sustainability</summary>
     <div class="small-print">
       <p><b>Deposits come off your bill</b>Online bookings take a redeemable deposit: $50 blow-dries, $100 cuts, $150 colour and keratin, $20 Style Bar. Changes within 48 hours forfeit it.</p>
       <p><b>Afterpay &amp; Zip</b>Pay for services and products interest free. Every guest earns Elysium Rewards points, which never expire.</p>
       <p><b>A sustainable salon</b>Up to 98% of our salon waste is recycled or repurposed. Each visit carries a $3 green cost for Sustainable Salons.</p>
     </div>
+    </details>
   </div>
 </section>
 
@@ -655,12 +747,14 @@ footer a:hover{color:var(--paper);text-decoration:underline}
         <li data-d="0" class="closed"><span class="day">Sunday</span><span class="tm">Closed</span><span class="tag"></span><span class="bar"></span></li>
       </ul>
       <p class="note">Closed on public holidays. Times shown in Brisbane time.</p>
+      <details class="more" open><summary>Getting here &amp; what to expect</summary>
       <div class="getting">
         <p><b>Metro, bus or train</b>M1 Metro to Roma Street. Buses 45, 46, 47, 17, 18 and 19 stop nearby. Central, Roma Street and South Brisbane stations are under 15 minutes' walk.</p>
         <p><b>By car</b>Pre-book at Uptown (Elizabeth St), Queens Plaza (Edward St) or Wilsons Brisbane Quarter, and aim to arrive at the car park 20 minutes before your appointment.</p>
         <p><b>While you're here</b>Wifi, drinks and snacks with gluten-free and lactose-free options, a cloakroom, disabled access and storage for your bike or scooter.</p>
         <p><b>Before you come in</b>Arrive with your hair as you usually wear it, ideally two or three days after washing, and tangle free.</p>
       </div>
+      </details>
     </div>
     <div>
       <address>15 Adelaide Street,<br>Brisbane City QLD 4000</address>
@@ -729,8 +823,8 @@ footer a:hover{color:var(--paper);text-decoration:underline}
 </footer>
 
 <div class="mbar" role="navigation" aria-label="Quick actions">
-  <a class="btn btn-ink" href="#book">Book online</a>
-  <a class="btn btn-line" href="tel:0732290816"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
+  <a class="btn btn-ink" id="mbook" href="#book">Book online</a>
+  <a class="btn btn-line" id="mcall" href="tel:0732290816"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
 </div>
 
 <script>
@@ -765,6 +859,16 @@ footer a:hover{color:var(--paper);text-decoration:underline}
       },2600)},1600+k*1300);
     });
   }
+  /* menu */
+  var mb=document.querySelector('.menu-btn'),mn=document.getElementById('mnav');
+  function setMenu(o,back){mn.hidden=!o;mb.setAttribute('aria-expanded',o);mb.querySelector('span').textContent=o?'Close':'Menu';document.documentElement.style.overflow=o?'hidden':'';if(o)mn.querySelector('a').focus();else if(back)mb.focus()}
+  mb.addEventListener('click',function(){setMenu(mn.hidden)});
+  mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!mn.hidden)setMenu(false,true)});
+  matchMedia('(min-width:1101px)').addEventListener('change',function(m){if(m.matches)setMenu(false)});
+  document.getElementById('mnav-today').textContent=document.getElementById('status-main').textContent+' '+document.getElementById('status-sub').textContent;
+  /* collapsible details: closed on phones */
+  if(matchMedia('(max-width:760px)').matches)document.querySelectorAll('details.more').forEach(function(d){d.open=false});
   var top=document.getElementById('top');
   addEventListener('scroll',function(){top.classList.toggle('scrolled',scrollY>8)},{passive:true});
 
@@ -776,6 +880,10 @@ footer a:hover{color:var(--paper);text-decoration:underline}
   tabs.forEach(function(t,i){
     t.addEventListener('click',function(){select(t)});
     t.addEventListener('keydown',function(e){var k=e.key,j=k==='ArrowRight'?i+1:k==='ArrowLeft'?i-1:k==='Home'?0:k==='End'?tabs.length-1:null;if(j===null)return;e.preventDefault();select(tabs[(j+tabs.length)%tabs.length],true)});
+  });
+
+  document.querySelectorAll('[data-tab]').forEach(function(a){
+    a.addEventListener('click',function(){var t=document.getElementById(a.dataset.tab);if(t)select(t)});
   });
 
   var PRICES={balayage:{s:155,m:187,l:198,x:214},foils:{s:180,m:221,l:207,x:238}};
@@ -860,7 +968,17 @@ footer a:hover{color:var(--paper);text-decoration:underline}
     go.href=ev?sms:url;go.target=ev?'_self':'_blank';
     go.firstChild.nodeValue=ev?'Text us to book ':(s&&s.id==='consult'?'Start free consultation ':'Continue to secure booking ');
     document.getElementById('sms').href=sms;
+    MB={s:s,p:p,href:go.href,target:go.target,ev:ev};paintBar();
   }
+  var MB={},inBook=false,mbook=document.getElementById('mbook'),mbar=document.querySelector('.mbar');
+  function paintBar(){
+    mbar.classList.toggle('in-book',inBook);
+    if(!inBook){mbook.textContent='Book online';mbook.href='#book';mbook.target='_self';mbook.classList.remove('muted');return}
+    if(!MB.s){mbook.textContent='Choose a service above';mbook.href='#book';mbook.target='_self';mbook.classList.add('muted');return}
+    mbook.classList.remove('muted');mbook.href=MB.href;mbook.target=MB.target;
+    mbook.textContent=MB.ev?'Text us to book':(MB.s.id==='consult'?'Start free consultation':'Continue'+(MB.p!=null?' · from $'+MB.p:'')+' →');
+  }
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){inBook=es[0].isIntersecting;paintBar()},{rootMargin:'-30% 0px -30% 0px'}).observe(document.getElementById('flow'))}
   document.getElementById('first-wrap').addEventListener('change',render);
   document.querySelectorAll('[data-pick]').forEach(function(a){
     a.addEventListener('click',function(){var r=document.getElementById('svc-'+a.dataset.pick);if(r){r.checked=true;S.svc=r.value;render()}});
